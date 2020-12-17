@@ -4,11 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace TEAM_NAME_SPACE{
-    public class ExampleGameScript : MonoBehaviour
+namespace GLUETHULHU_TESTING {
+    public class TextDisplay : MonoBehaviour
     {
-        // DELETE THIS FILE BEFORE YOU SUBMIT //
-        //...or at the very least, change the namespace//
         public Text UIText;
         public string startText;
         public string winText;
@@ -25,16 +23,9 @@ namespace TEAM_NAME_SPACE{
             minigame.gameWin = false;
         }
 
-        private void Update()
-        {
-            if (Input.GetButtonDown("Space"))
-            {
-                if (!minigame.gameWin)
-                {
-                    minigame.gameWin = true;
-                    UIText.text = winText;
-                    minigameManager.PlaySound("win");
-                }
+        private void Update() {
+            if (minigame.gameWin) {
+                UIText.text = winText;
             }
         }
     }

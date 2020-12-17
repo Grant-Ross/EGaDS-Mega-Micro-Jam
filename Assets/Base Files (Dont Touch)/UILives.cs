@@ -9,7 +9,7 @@ public class UILives : MonoBehaviour
     {
         for(int i = 0; i <= 2; i++) //TODO: CHANGE THIS
         {
-            if (i >= GameManager.instance.remainingLives) transform.GetChild(i).gameObject.SetActive(false);
+            if (i >= MainGameManager.instance.remainingLives) transform.GetChild(i).gameObject.SetActive(false);
         }
     }
 }

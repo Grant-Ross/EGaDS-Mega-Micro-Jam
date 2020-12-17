@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
         {
             text.text = time.ToString();
             time -= 1;
-            yield return new WaitForSeconds(.42f);
+            yield return new WaitForSeconds(.42857f);
         }
         gameObject.SetActive(false);
     }

@@ -13,8 +13,7 @@ public class ImpactWord : MonoBehaviour
     {
         if (instance == null) instance = this;
         else Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
-        impactText.gameObject.SetActive(false);
+        impactText.enabled = false;
         textRect = impactText.GetComponent<RectTransform>();
     }
 
@@ -26,13 +25,13 @@ public class ImpactWord : MonoBehaviour
     private IEnumerator ImpactText()
     {
         textRect.localScale = new Vector3(2,2);
-        impactText.gameObject.SetActive(true);
+        impactText.enabled = true;
         while (textRect.localScale.x > 1)
         {
             textRect.localScale -= new Vector3(.05f,.05f);
             yield return new WaitForSeconds(.01f);
         }
         yield return new WaitForSeconds(1);
-        impactText.gameObject.SetActive(false);
+        impactText.enabled = false;
     }
 }

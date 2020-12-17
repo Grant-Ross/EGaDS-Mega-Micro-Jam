@@ -10,13 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10b6289b71b71e942a2499ed4eb71c02, type: 3}
-  m_Name: Minigame
+  m_Name: Hit Him!
   m_EditorClassIdentifier: 
-  gameTime: 0
-  music: {fileID: 8300000, guid: 1f9d26546e4c71e40868a9aa86610c2e, type: 3}
+  gameTime: 1
+  music: {fileID: 8300000, guid: 46cd5dbba7a90e4489c58ab562964e02, type: 3}
   sounds:
   - soundName: win
     clip: {fileID: 8300000, guid: ff8d7b94f6c5d01408383d95abda219b, type: 3}
     volume: 1
+    source: {fileID: 0}
+  - soundName: bonk
+    clip: {fileID: 8300000, guid: 4c2706f1daefad244813d9cc5ca44418, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - soundName: hit
+    clip: {fileID: 8300000, guid: 5726238573e11314f81e0a31f373b2b1, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - soundName: boom
+    clip: {fileID: 8300000, guid: ea02b6f0b0a872a41b9cf4cc49ad9b43, type: 3}
+    volume: 0.278
     source: {fileID: 0}
   gameWin: 1

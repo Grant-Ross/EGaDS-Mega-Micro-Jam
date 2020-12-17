@@ -27,15 +27,10 @@ public class MinigameManager : MonoBehaviour
             }
         }
     }
-
-    
-    
-    
-    private AudioSource musicSource;
-
-
+    private AudioSource _musicSource;
     private void Awake()
     {
+        minigame.gameWin = false;
         if (!debugGameOnly && GameManager.instance == null)
         {
             debugGameOnly = true;
@@ -43,18 +38,23 @@ public class MinigameManager : MonoBehaviour
         }
         else
         {
-            GameManager.instance.onMinigameStart(minigame);
-            musicSource = gameObject.AddComponent<AudioSource>();
-            musicSource.clip = minigame.music;
+            _musicSource = gameObject.AddComponent<AudioSource>();
+            _musicSource.clip = minigame.music;
             foreach (var s in minigame.sounds)
             {
                 s.source = gameObject.AddComponent<AudioSource>();
                 s.source.clip = s.clip;
                 s.source.volume = s.volume;
             }
-
-            musicSource.Play();
+            StartCoroutine(GameDelayedStart());
         }
+    }
+
+    private IEnumerator GameDelayedStart()
+    {
+        yield return new WaitForSeconds(.2333f);
+        MainGameManager.instance.OnMinigameStart(minigame);
+        _musicSource.Play();
     }
 
 }

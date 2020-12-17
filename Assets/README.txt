@@ -42,6 +42,13 @@
     - Short games are 2 measures (~3.4 seconds)
     - Long games are 4 measure (~6.8 seconds)
 
+        SUBMISSION CHECKLIST:
+ *****************************************
+ - Did you delete the example script and the example sound and music clips?
+ - Did you rename the folder that has all of your assets from "MyTeam"?
+ - Did you put all of your scripts in the same namespace?
+ - Did you remove all of your debug.log and print statements? (so that we can debug easier)
+ - Did you ONLY zip up YOUR scene and assets in your submission file?
 
 
 

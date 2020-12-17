@@ -8,17 +8,37 @@
       <e p="Assets" t="Include">
         <e p="Base Files (Dont Touch)" t="Include">
           <e p="AudioManager.cs" t="Include" />
+          <e p="EndScreen.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="ImpactWord.cs" t="Include" />
+          <e p="MainGameManager.cs" t="Include" />
+          <e p="MainScene.cs" t="Include" />
           <e p="MiniGame.cs" t="Include" />
           <e p="MinigameManager.cs" t="Include" />
+          <e p="RoundText.cs" t="Include" />
           <e p="SoundAsset.cs" t="Include" />
           <e p="Timer.cs" t="Include" />
           <e p="TimerManager.cs" t="Include" />
+          <e p="TitleScreen.cs" t="Include" />
           <e p="UILives.cs" t="Include" />
         </e>
-        <e p="MyTeam" t="Include">
-          <e p="ExampleGameScript.cs" t="Include" />
+        <e p="GameOverWindow.cs" t="Include" />
+        <e p="Gluethulhu Alex Testing" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="Movement.cs" t="Include" />
+            <e p="PlatformBounce.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
+            <e p="Shooting.cs" t="Include" />
+            <e p="TextDisplay.cs" t="Include" />
+          </e>
+        </e>
+        <e p="LevelPreview.cs" t="Include" />
+        <e p="Matt" t="Include">
+          <e p="Crusher.cs" t="Include" />
+          <e p="Hitbox.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
+          <e p="Minigamer.cs" t="Include" />
         </e>
         <e p="Noah! (Test)" t="Include">
           <e p="Noah_Avoider.cs" t="Include" />

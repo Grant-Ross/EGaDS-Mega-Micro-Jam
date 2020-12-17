@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugGameOnly: 0
-  minigame: {fileID: 11400000, guid: 14b07f47bd288c740a75836a0892ca27, type: 2}
+  minigame: {fileID: 11400000, guid: 496e469fbc8fce64ab7ceec3e4c2f217, type: 2}
 --- !u!4 &215339488
 Transform:
   m_ObjectHideFlags: 0
