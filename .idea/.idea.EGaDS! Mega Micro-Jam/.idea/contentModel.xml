@@ -10,7 +10,9 @@
           <e p="AudioManager.cs" t="Include" />
           <e p="EndScreen.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="GameOverWindow.cs" t="Include" />
           <e p="ImpactWord.cs" t="Include" />
+          <e p="LevelPreview.cs" t="Include" />
           <e p="MainGameManager.cs" t="Include" />
           <e p="MainScene.cs" t="Include" />
           <e p="MiniGame.cs" t="Include" />
@@ -22,7 +24,12 @@
           <e p="TitleScreen.cs" t="Include" />
           <e p="UILives.cs" t="Include" />
         </e>
-        <e p="GameOverWindow.cs" t="Include" />
+        <e p="Example Boss Game" t="Include">
+          <e p="Boss Game Files (Dont Change)" t="Include">
+            <e p="BossGame.cs" t="Include" />
+            <e p="BossGameManager.cs" t="Include" />
+          </e>
+        </e>
         <e p="Gluethulhu Alex Testing" t="Include">
           <e p="Scripts" t="Include">
             <e p="Enemy.cs" t="Include" />
@@ -33,7 +40,6 @@
             <e p="TextDisplay.cs" t="Include" />
           </e>
         </e>
-        <e p="LevelPreview.cs" t="Include" />
         <e p="Matt" t="Include">
           <e p="Crusher.cs" t="Include" />
           <e p="Hitbox.cs" t="Include" />

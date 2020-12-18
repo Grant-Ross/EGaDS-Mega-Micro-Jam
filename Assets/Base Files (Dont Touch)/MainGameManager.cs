@@ -63,7 +63,7 @@ public class MainGameManager : MonoBehaviour
 
     private const int StartingLives = 3;
     [HideInInspector] public int remainingLives;
-    public int numberOfGames;
+    private int numberOfGames;
     private List<string> _remainingGames;
 
     private const float ShortTime = 3.4286f;
@@ -78,6 +78,7 @@ public class MainGameManager : MonoBehaviour
     {
         if(instance == null) instance = this;
         else Destroy(gameObject);
+        numberOfGames = SceneManager.sceneCountInBuildSettings - 3;
     }
 
     private void Start()

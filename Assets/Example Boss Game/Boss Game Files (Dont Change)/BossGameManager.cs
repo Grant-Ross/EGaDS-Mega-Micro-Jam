@@ -1,26 +1,17 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Random = UnityEngine.Random;
 
-
-public class MinigameManager : MonoBehaviour
+public class BossGameManager : MonoBehaviour
 {
-    //******* FOR DEBUGGING *******//
-    public bool debugGameOnly; // set to true if you want to test your scene alone in play mode;
-    //****************************//
-
-    public Minigame minigame;
+    [SerializeField] private bool debugGameOnly;
     
-    
-    
-
+    public BossGame bossGame;
     
     public void PlaySound(string soundName)
     {
-        foreach (var s in minigame.sounds)
+        foreach (var s in bossGame.sounds)
         {
             if (s.soundName == soundName)
             {
@@ -32,7 +23,7 @@ public class MinigameManager : MonoBehaviour
     private AudioSource _musicSource;
     private void Awake()
     {
-        minigame.gameWin = false;
+        bossGame.gameWin = false;
         if (!debugGameOnly && GameManager.instance == null)
         {
             debugGameOnly = true;
@@ -40,9 +31,7 @@ public class MinigameManager : MonoBehaviour
         }
         else
         {
-            _musicSource = gameObject.AddComponent<AudioSource>();
-            _musicSource.clip = minigame.music;
-            foreach (var s in minigame.sounds)
+            foreach (var s in bossGame.sounds)
             {
                 s.source = gameObject.AddComponent<AudioSource>();
                 s.source.clip = s.clip;
@@ -51,13 +40,13 @@ public class MinigameManager : MonoBehaviour
             StartCoroutine(GameDelayedStart());
         }
     }
-
+    
     private IEnumerator GameDelayedStart()
     {
         yield return new WaitForSeconds(.2333f);
-        MainGameManager.instance.OnMinigameStart(minigame);
+        //MainGameManager.instance.OnBossStart(minigame);
         _musicSource.Play();
     }
-
+    
+    
 }
-

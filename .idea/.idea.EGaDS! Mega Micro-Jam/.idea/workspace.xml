@@ -20,157 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b94d71-4a1e-4cef-94db-0967b5a4df69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/EndScreen.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/EndScreen.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Food Silhouette.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Food Silhouette.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Game Manager.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Game Manager.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Game Over Window.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Game Over Window.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Main Scene UI.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Main Scene UI.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainScene.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainScene.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/RoundText.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/RoundText.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/TitleScreen.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/TitleScreen.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/invert-mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/invert-mask.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/main-scene-big-idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/main-scene-big-idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/main-scene-grow.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/main-scene-grow.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/main-scene-normal.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/main-scene-normal.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/main-scene-shrink.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/main-scene-shrink.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/mask-big-idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/mask-big-idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/mask-grow.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/mask-grow.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/mask-shrink.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/mask-shrink.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/mask-small-idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/mask-small-idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameOverWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Alex 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Alex 1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Alex.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Alex.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Breadsprite.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Breadsprite.aseprite.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Circle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Square.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Triangle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/Triangle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/sticker-png-cannon-artillery-silhouette-artillery-angle-text-photography-monochrome.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Art/sticker-png-cannon-artillery-silhouette-artillery-angle-text-photography-monochrome.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/034. Bowling.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/034. Bowling.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/068. The Real McCoy.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/068. The Real McCoy.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/278984__dflee4__kick-thump.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/278984__dflee4__kick-thump.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/Bonk Sound Effect #2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/Bonk Sound Effect #2.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/ExampleMusic.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/ExampleMusic.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/firework.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/firework.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/thud.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/thud.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/win.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/win.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Prefabs/Cannon.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Prefabs/Cannon.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Prefabs/Cannonball.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Prefabs/Cannonball.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/Enemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/Enemy.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/Movement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/Movement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/PlatformBounce.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/PlatformBounce.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/Projectile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/Projectile.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/Shooting.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/Shooting.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/TextDisplay.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/TextDisplay.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/bouncy ball.physicsMaterial2D" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/bouncy ball.physicsMaterial2D.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LevelPreview.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/LevelPreview.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Crush.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Crush.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Crush.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Crush.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Crusher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Crusher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/ExampleMusic.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/ExampleMusic.mp3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Hitbox.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Hitbox.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Hitbox.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Hitbox.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Item.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Item.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Minigamer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/Minigamer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/circle.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/square.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/win.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Matt/win.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameOverWindow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameOverWindow.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/LevelPreview.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/LevelPreview.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Example Boss Game.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGame.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGame.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGameManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Example Boss Game/Boss.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Example Boss Game/Boss.unity.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/ImpactWord.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/ImpactWord.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Game Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Game Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MinigameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MinigameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/End.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/End.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/TitleScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/TitleScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Timer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/UILives.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/UILives.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/ExampleGameScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/ExampleGameScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/ExampleMusic.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/ExampleMusic.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/Minigame.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/Minigame.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/win.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MyTeam/win.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Noah! (Test)/Avoid.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Noah! (Test)/Avoid.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Noah! (Test)/Noah_Minigame.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Noah! (Test)/Noah_Minigame.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/SoundAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/SoundAsset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameOverWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameOverWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPreview.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelPreview.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,10 +52,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Base Files (Dont Touch)/TimerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Desktop/MyTeam - RENAME/ExampleGameScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameOverWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Base Files (Dont Touch)/UILives.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Base Files (Dont Touch)/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -215,12 +87,16 @@
         <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/ImpactWord.cs" />
-        <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MinigameManager.cs" />
         <option value="$PROJECT_DIR$/../../../Desktop/MyTeam - RENAME/ExampleGameScript.cs" />
         <option value="$PROJECT_DIR$/Assets/LevelPreview.cs" />
         <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/RoundText.cs" />
         <option value="$PROJECT_DIR$/Assets/GameOverWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/LevelPreview.cs" />
+        <option value="$PROJECT_DIR$/Assets/Example Boss Game/BossGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/SoundAsset.cs" />
+        <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MinigameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGameManager.cs" />
       </list>
     </option>
   </component>
@@ -288,6 +164,7 @@
       <workItem from="1606172009370" duration="15462000" />
       <workItem from="1607915077735" duration="6631000" />
       <workItem from="1607975113421" duration="3513000" />
+      <workItem from="1608177717818" duration="3643000" />
     </task>
     <servers />
   </component>
