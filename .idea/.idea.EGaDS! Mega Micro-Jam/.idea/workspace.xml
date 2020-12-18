@@ -20,36 +20,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b94d71-4a1e-4cef-94db-0967b5a4df69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/TitleScreen Old.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/TitleScreen Old.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation/Bee.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation/Bee.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation/Title.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation/Title.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation/TitleBee_ANIM.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation/TitleBee_ANIM.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation/TitleTitle_ANIM.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Animation/TitleTitle_ANIM.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_ExitButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_ExitButton.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_StartButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_StartButton.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_Title2020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_Title2020.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_TitleBackground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_TitleBackground.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_TitleBee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_TitleBee.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_TitleTitle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_TitleTitle.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_TryAgainButton.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Art Assets/Art/Bee_TryAgainButton.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Scenes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Scenes/TitleScreen.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Scenes/TitleScreen.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Scripts/TitleScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Beegads Title Screen/Scripts/TitleScreen.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EGaDS! Mega Micro-Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/EndScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/EndScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameOverWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameOverWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MinigameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MinigameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/TitleScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/TitleScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change).meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGame.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGame.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGameManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGameManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Example Boss Game/Boss.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/ExampleMusic.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/ExampleMusic.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/win.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Audio/win.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Hit Him!.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/TextDisplay.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Gluethulhu Alex Testing/Scripts/TextDisplay.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matt/Crush.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matt/Crush.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/TitleScreen.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/Scenes/TitleScreen.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +74,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Base Files (Dont Touch)/UILives.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Base Files (Dont Touch)/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Beegads Title Screen/Scripts/TitleScreen.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -103,6 +112,7 @@
         <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/MainGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Example Boss Game/Boss Game Files (Dont Change)/BossGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Base Files (Dont Touch)/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Beegads Title Screen/Scripts/TitleScreen.cs" />
       </list>
     </option>
   </component>
@@ -171,7 +181,7 @@
       <workItem from="1607915077735" duration="6631000" />
       <workItem from="1607975113421" duration="3513000" />
       <workItem from="1608177717818" duration="3643000" />
-      <workItem from="1608276506247" duration="2020000" />
+      <workItem from="1608276506247" duration="2483000" />
     </task>
     <servers />
   </component>

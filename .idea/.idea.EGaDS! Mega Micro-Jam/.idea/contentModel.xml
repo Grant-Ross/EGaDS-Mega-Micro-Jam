@@ -24,6 +24,11 @@
           <e p="TitleScreen.cs" t="Include" />
           <e p="UILives.cs" t="Include" />
         </e>
+        <e p="Beegads Title Screen" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="TitleScreen.cs" t="Include" />
+          </e>
+        </e>
         <e p="Matt" t="Include">
           <e p="Crusher.cs" t="Include" />
           <e p="Hitbox.cs" t="Include" />
