@@ -24,22 +24,6 @@
           <e p="TitleScreen.cs" t="Include" />
           <e p="UILives.cs" t="Include" />
         </e>
-        <e p="Example Boss Game" t="Include">
-          <e p="Boss Game Files (Dont Change)" t="Include">
-            <e p="BossGame.cs" t="Include" />
-            <e p="BossGameManager.cs" t="Include" />
-          </e>
-        </e>
-        <e p="Gluethulhu Alex Testing" t="Include">
-          <e p="Scripts" t="Include">
-            <e p="Enemy.cs" t="Include" />
-            <e p="Movement.cs" t="Include" />
-            <e p="PlatformBounce.cs" t="Include" />
-            <e p="Projectile.cs" t="Include" />
-            <e p="Shooting.cs" t="Include" />
-            <e p="TextDisplay.cs" t="Include" />
-          </e>
-        </e>
         <e p="Matt" t="Include">
           <e p="Crusher.cs" t="Include" />
           <e p="Hitbox.cs" t="Include" />

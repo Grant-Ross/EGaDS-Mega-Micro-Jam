@@ -7,6 +7,6 @@ public class EndScreen : MonoBehaviour
 {
     public void LoadTitle()
     {
-        GameManager.instance.LoadScene("TitleScreen");
+        GameManager.Instance.LoadScene("TitleScreen");
     }
 }

@@ -83,7 +83,7 @@ public class MainGameManager : MonoBehaviour
 
     private void Start()
     {
-        GameManager.instance.mainGameListener.AddListener(StartGame);
+        GameManager.Instance.mainGameListener.AddListener(StartGame);
     }
 
     public void StartGame()
@@ -190,7 +190,7 @@ public class MainGameManager : MonoBehaviour
         }
         else
         {
-            GameManager.instance.LoadScene("End");
+            GameManager.Instance.LoadScene("End");
         }
     }
 }

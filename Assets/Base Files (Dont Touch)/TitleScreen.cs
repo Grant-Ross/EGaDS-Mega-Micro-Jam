@@ -8,7 +8,7 @@ public class TitleScreen : MonoBehaviour
 
     public void StartGame()
     {
-        GameManager.instance.LoadScene("Main");
+        GameManager.Instance.LoadScene("Main");
     }
 
     public void QuitGame()

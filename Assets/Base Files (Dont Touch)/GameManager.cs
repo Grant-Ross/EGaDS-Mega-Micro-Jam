@@ -5,14 +5,12 @@ using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using Debug = UnityEngine.Debug;
-using Random = UnityEngine.Random;
 
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    private static GameManager _instance;
+    public static GameManager Instance => _instance ? _instance : FindObjectOfType<GameManager>();
     public enum GameState
     {
         TitleScreen, MainGame, EndScreen
@@ -52,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) instance = this;
+        if (_instance == null) _instance = this;
         else Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         

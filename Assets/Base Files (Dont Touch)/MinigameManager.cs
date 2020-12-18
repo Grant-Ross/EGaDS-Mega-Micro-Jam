@@ -33,7 +33,7 @@ public class MinigameManager : MonoBehaviour
     private void Awake()
     {
         minigame.gameWin = false;
-        if (!debugGameOnly && GameManager.instance == null)
+        if (!debugGameOnly && GameManager.Instance == null)
         {
             debugGameOnly = true;
             SceneManager.LoadScene("Main");

@@ -29,7 +29,7 @@ public class GameOverWindow : MonoBehaviour
     public void TitleButton()
     {
         window.SetActive(false);
-        GameManager.instance.LoadScene("TitleScreen");
+        GameManager.Instance.LoadScene("TitleScreen");
     }
     private void OnDestroy()
     {
