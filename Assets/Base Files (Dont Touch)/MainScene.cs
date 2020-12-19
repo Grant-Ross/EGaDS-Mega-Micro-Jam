@@ -10,12 +10,8 @@ public class MainScene : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-    }
-
-    private void Start()
-    {
-       MainGameManager.instance.GrowMainScene += GrowScene;
-       MainGameManager.instance.ShrinkMainScene += ShrinkScene;
+        MainGameManager.Instance.GrowMainScene += GrowScene;
+        MainGameManager.Instance.ShrinkMainScene += ShrinkScene;
     }
 
     private void GrowScene()
@@ -30,7 +26,7 @@ public class MainScene : MonoBehaviour
 
     private void OnDestroy()
     {
-        MainGameManager.instance.GrowMainScene -= GrowScene;
-        MainGameManager.instance.ShrinkMainScene -= ShrinkScene;
+        MainGameManager.Instance.GrowMainScene -= GrowScene;
+        MainGameManager.Instance.ShrinkMainScene -= ShrinkScene;
     }
 }

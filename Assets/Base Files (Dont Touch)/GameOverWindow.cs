@@ -11,19 +11,18 @@ public class GameOverWindow : MonoBehaviour
     private void Awake()
     {
         window.SetActive(false);
-        MainGameManager.instance.GameLose += GameLose;
+        MainGameManager.Instance.GameOver += GameLose;
     }
 
     private void GameLose()
     {
-        window.SetActive(true);
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public void RestartButton()
     {
         window.SetActive(false);
-        //FindObjectOfType<AudioManager>().StartMusic();
-        MainGameManager.instance.RestartGame();
+        MainGameManager.Instance.RestartGame();
     }
 
     public void TitleButton()
@@ -31,8 +30,9 @@ public class GameOverWindow : MonoBehaviour
         window.SetActive(false);
         GameManager.Instance.LoadScene("TitleScreen");
     }
+
     private void OnDestroy()
     {
-        MainGameManager.instance.GameLose -= GameLose;
+        MainGameManager.Instance.GameOver -= GameLose;
     }
 }

@@ -10,6 +10,6 @@ public class RoundText : MonoBehaviour
 
     private void Start()
     {
-        roundText.text = MainGameManager.instance.roundNumber.ToString();
+        roundText.text = MainGameManager.Instance.roundNumber.ToString();
     }
 }
