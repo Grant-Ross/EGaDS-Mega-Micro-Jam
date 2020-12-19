@@ -10,7 +10,8 @@ using Random = UnityEngine.Random;
 
 public class MainGameManager : MonoBehaviour
 {
-    public static MainGameManager instance;
+    private static MainGameManager _instance;
+    public static MainGameManager Instance => _instance ? _instance : FindObjectOfType<MainGameManager>();
     public enum MainGameState
     {
         Main, Game
@@ -47,10 +48,17 @@ public class MainGameManager : MonoBehaviour
     {
         if(ShrinkMainScene != null) ShrinkMainScene.Invoke();
     }
-    public event Action GameLose;
-    public void OnGameLose()
+
+    public event Action<bool> MainStart;
+    public void OnMainStart(bool win)
     {
-        if(GameLose != null) GameLose.Invoke();
+        if(MainStart != null) MainStart.Invoke(win);
+    }
+    
+    public event Action GameOver;
+    public void OnGameOver()
+    {
+        if(GameOver != null) GameOver.Invoke();
     }
 
 
@@ -66,7 +74,7 @@ public class MainGameManager : MonoBehaviour
     private int numberOfGames;
     private List<string> _remainingGames;
 
-    private const float ShortTime = 3.4286f;
+    public const float ShortTime = 3.4286f;
     private const float LongTime = 6.8571f;
     public const float halfBeat = .23333f;
 
@@ -76,16 +84,11 @@ public class MainGameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null) instance = this;
+        if(_instance == null) _instance = this;
         else Destroy(gameObject);
-        numberOfGames = SceneManager.sceneCountInBuildSettings - 3;
-    }
-
-    private void Start()
-    {
+        numberOfGames = SceneManager.sceneCountInBuildSettings - indexOffset;
         GameManager.Instance.mainGameListener.AddListener(StartGame);
     }
-
     public void StartGame()
     {
         remainingLives = StartingLives;
@@ -120,6 +123,8 @@ public class MainGameManager : MonoBehaviour
 
     private IEnumerator LoadFirstGame()
     {
+        yield return null;
+        OnMainStart(true); // TODO: replace with start music
         yield return new WaitForSeconds(0);//TODO: Change to start wait time
         StartCoroutine(LoadNextGame());
     }
@@ -176,16 +181,18 @@ public class MainGameManager : MonoBehaviour
         yield return new WaitForSeconds(halfBeat);
         
         if (!minigame.gameWin) remainingLives -= 1;
+        roundNumber++;
         scene.allowSceneActivation = true;
         yield return null;
         OnShrinkMainScene();
         if (remainingLives == 0)
         {
-            Invoke(nameof(OnGameLose), .1f);
+            yield return null;
+            OnGameOver();
         }
-        else if (roundNumber < roundsToWin)
+        else if (roundNumber <= roundsToWin)
         {
-            roundNumber++;
+            OnMainStart(minigame.gameWin);
             StartCoroutine(LoadNextGame());
         }
         else

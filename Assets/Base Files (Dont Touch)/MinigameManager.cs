@@ -8,15 +8,19 @@ using Random = UnityEngine.Random;
 
 public class MinigameManager : MonoBehaviour
 {
-    //******* FOR DEBUGGING *******//
-    public bool debugGameOnly; // set to true if you want to test your scene alone in play mode;
+    private static MinigameManager _instance; 
+    
+    //******* MINIGAME MANAGER SINGLETON *******//
+    // Use this to reference your minigame Scriptable Object and the PlaySound method from other scripts
+    public static MinigameManager Instance => _instance ? _instance : FindObjectOfType<MinigameManager>();
+    //*****************************************//
+    
+    //******* DEBUG GAME ONLY *******//
+    // set to true if you want to test your scene alone in play mode;
+    public bool debugGameOnly; 
     //****************************//
 
     public Minigame minigame;
-    
-    
-    
-
     
     public void PlaySound(string soundName)
     {
@@ -29,9 +33,25 @@ public class MinigameManager : MonoBehaviour
             }
         }
     }
+    
+    // ^^^^^^^^^ This is the only stuff you need to worry about ^^^^^^^^^^ //
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     private AudioSource _musicSource;
+    
     private void Awake()
     {
+        _instance = this;
         minigame.gameWin = false;
         if (!debugGameOnly && GameManager.Instance == null)
         {
@@ -55,7 +75,7 @@ public class MinigameManager : MonoBehaviour
     private IEnumerator GameDelayedStart()
     {
         yield return new WaitForSeconds(.2333f);
-        MainGameManager.instance.OnMinigameStart(minigame);
+        MainGameManager.Instance.OnMinigameStart(minigame);
         _musicSource.Play();
     }
 
