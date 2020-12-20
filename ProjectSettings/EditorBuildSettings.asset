@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Beegads Title Screen/Scenes/TitleScreen.unity
+    path: Assets/Base Files (Dont Touch)/Scenes/TitleScreen.unity
     guid: 771da822a5d0e74419e56a15f7d6a649
   - enabled: 1
     path: Assets/Base Files (Dont Touch)/Scenes/Main.unity

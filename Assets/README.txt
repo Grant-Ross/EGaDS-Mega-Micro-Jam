@@ -1,5 +1,5 @@
         
-        Constraints List:
+	        Requirements List:
  ***************************************
 - EVERY SCRIPT you add must have the same unique namespace:
 	
@@ -14,6 +14,9 @@
 
 	- ^ If you don't do this, there may be naming conflicts with other team's projects
 	- Give the folder you submit this same name, for the same reason
+	
+	
+	        Constraints List:
  ***************************************
 - Don't change ANYTHING in project settings
     - There are a few added collision and rendering layers for you to work with. Hopefully these will be enough with how simple the games are
