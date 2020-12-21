@@ -5,16 +5,14 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public Minigame.GameTime gameTime;
-    public Text text;
-    
+    private const float Tick = .42857f;
     public IEnumerator GameTimer(int time)
     {
         while (time >= 0)
         {
-            text.text = time.ToString();
             time -= 1;
-            yield return new WaitForSeconds(.42857f);
+            yield return new WaitForSeconds(Tick);
+            
         }
         gameObject.SetActive(false);
     }
