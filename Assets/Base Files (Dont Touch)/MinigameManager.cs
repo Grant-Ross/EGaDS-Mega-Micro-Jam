@@ -58,18 +58,17 @@ public class MinigameManager : MonoBehaviour
             debugGameOnly = true;
             SceneManager.LoadScene("Main");
         }
-        else
+
+        _musicSource = gameObject.AddComponent<AudioSource>();
+        _musicSource.clip = minigame.music;
+        foreach (var s in minigame.sounds)
         {
-            _musicSource = gameObject.AddComponent<AudioSource>();
-            _musicSource.clip = minigame.music;
-            foreach (var s in minigame.sounds)
-            {
-                s.source = gameObject.AddComponent<AudioSource>();
-                s.source.clip = s.clip;
-                s.source.volume = s.volume;
-            }
-            StartCoroutine(GameDelayedStart());
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+            s.source.volume = s.volume;
         }
+        if(GameManager.Instance != null )StartCoroutine(GameDelayedStart());
+        else _musicSource.Play();
     }
 
     private IEnumerator GameDelayedStart()

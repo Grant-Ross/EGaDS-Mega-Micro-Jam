@@ -535,6 +535,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 338288251515896222, guid: 299268e851095ea429ce927bf2bef866,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 566529860167362531, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
       propertyPath: m_RootOrder
@@ -629,6 +634,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753492707297013645, guid: 299268e851095ea429ce927bf2bef866,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.2270826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753492707297013645, guid: 299268e851095ea429ce927bf2bef866,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6496938
+      objectReference: {fileID: 0}
+    - target: {fileID: 6753492707297013645, guid: 299268e851095ea429ce927bf2bef866,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
       objectReference: {fileID: 0}
     - target: {fileID: 7258696147295923499, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
@@ -1149,7 +1169,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 99
   m_TargetDisplay: 0
 --- !u!224 &1237186475
 RectTransform:
