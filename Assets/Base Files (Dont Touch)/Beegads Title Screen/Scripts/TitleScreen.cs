@@ -11,7 +11,7 @@ namespace Terry
         public void StartButton()
         {
             print("start");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            GameManager.Instance.LoadScene("Main");
         }
 
         // Update is called once per frame
