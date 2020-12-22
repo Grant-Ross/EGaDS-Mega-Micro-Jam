@@ -289,6 +289,8 @@ MonoBehaviour:
   indexOffset: 3
   roundsToWin: 5
   gameBorder: {fileID: 6753492707297013645}
+  debugBossMode: 1
+  bossSceneIndex: 3
 --- !u!1 &3256082928554374614
 GameObject:
   m_ObjectHideFlags: 0

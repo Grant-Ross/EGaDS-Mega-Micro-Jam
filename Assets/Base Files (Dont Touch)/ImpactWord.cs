@@ -17,15 +17,16 @@ public class ImpactWord : MonoBehaviour
         textRect = impactText.GetComponent<RectTransform>();
     }
 
-    public void HandleImpactText()
+    public void HandleImpactText(string text)
     {
-        StartCoroutine(ImpactText());
+        StartCoroutine(ImpactText(text));
     }
 
-    private IEnumerator ImpactText()
+    private IEnumerator ImpactText(string text)
     {
         textRect.localScale = new Vector3(2,2);
         impactText.enabled = true;
+        impactText.text = text + "!";
         while (textRect.localScale.x > 1)
         {
             textRect.localScale -= new Vector3(.05f,.05f);

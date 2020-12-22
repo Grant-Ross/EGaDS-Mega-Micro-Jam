@@ -82,6 +82,7 @@ public class MainGameManager : MonoBehaviour
     public int indexOffset;
     [SerializeField] private int roundsToWin;
     [SerializeField] private Image gameBorder;
+    [SerializeField] private bool debugBossMode;
 
     private void Awake()
     {
@@ -97,7 +98,12 @@ public class MainGameManager : MonoBehaviour
         _remainingGames = new List<string>();
         for(int i = 0; i < numberOfGames; i++) _remainingGames.Add(NameFromIndex(i+indexOffset));
         gameBorder.enabled = false;
-        StartCoroutine(LoadFirstGame());
+        if (debugBossMode) StartCoroutine(LoadBossGame());
+        else
+        {
+            for(int i = 0; i < numberOfGames; i++) _remainingGames.Add(NameFromIndex(i+indexOffset));
+            StartCoroutine(LoadFirstGame());
+        }
     }
 
     public void RestartGame()
@@ -139,10 +145,9 @@ public class MainGameManager : MonoBehaviour
         var sceneName = nextGame.name;
         AsyncOperation scene = SceneManager.LoadSceneAsync(nextGame.id);
         scene.allowSceneActivation = false;
-        SetImpactText(sceneName);
         yield return new WaitForSeconds(ShortTime - halfBeat - .31f);
         OnGrowMainScene();
-        ImpactWord.instance.HandleImpactText();
+        ImpactWord.instance.HandleImpactText(sceneName);
         yield return new WaitForSeconds(.21f);
         scene.allowSceneActivation = true;
         gameBorder.enabled = true;
@@ -150,11 +155,6 @@ public class MainGameManager : MonoBehaviour
         
     }
 
-    private void SetImpactText(string sceneName)
-    {
-        sceneName += "!";
-        impactText.text = sceneName;
-    }
 
     private GameInfo GetNextGame()
     {
@@ -203,6 +203,54 @@ public class MainGameManager : MonoBehaviour
         else
         {
             GameManager.Instance.LoadScene("End");
+        }
+    }
+    public int bossSceneIndex;
+    private IEnumerator LoadBossGame()
+    {
+        OnMainStart(true); // TODO: Replace with boss load music
+        yield return new WaitForSeconds(.1f);
+        AsyncOperation scene = SceneManager.LoadSceneAsync(bossSceneIndex);
+        //TODO: Change this to a boss sequence:
+        scene.allowSceneActivation = false;
+        yield return new WaitForSeconds(ShortTime - halfBeat - .31f);
+        OnGrowMainScene();
+        ImpactWord.instance.HandleImpactText(NameFromIndex(bossSceneIndex));
+        yield return new WaitForSeconds(.21f);
+        scene.allowSceneActivation = true;
+        LevelPreview.instance.HandleLevelPreview(true);
+        
+    }
+    public void OnBossGameStart(BossGame bossGame)
+    {
+        StartCoroutine(WaitForBossGameEnd(bossGame));
+    }
+    private IEnumerator WaitForBossGameEnd(BossGame bossGame)
+    {
+        bossGame.gameOver = false;
+        yield return new WaitForSeconds(.1f);
+        AsyncOperation scene = SceneManager.LoadSceneAsync("Main");
+        scene.allowSceneActivation = false;
+        while (!bossGame.gameOver) yield return null;
+
+        LevelPreview.instance.HandleLevelPreview(false);
+        yield return new WaitForSeconds(halfBeat);
+        
+        if (!bossGame.gameWin) remainingLives -= 1;
+        scene.allowSceneActivation = true;
+        yield return null;
+        OnShrinkMainScene();
+        if (remainingLives == 0)
+        {
+            Invoke(nameof(OnGameOver), .1f);
+        }
+        else if (bossGame.gameWin)
+        {
+            SceneManager.LoadScene("End");
+        }
+        else
+        {
+            StartCoroutine(LoadBossGame());
         }
     }
 }
