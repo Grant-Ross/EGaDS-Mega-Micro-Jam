@@ -57,6 +57,7 @@ public class MinigameManager : MonoBehaviour
         {
             debugGameOnly = true;
             SceneManager.LoadScene("Main");
+            return;
         }
 
         _musicSource = gameObject.AddComponent<AudioSource>();
