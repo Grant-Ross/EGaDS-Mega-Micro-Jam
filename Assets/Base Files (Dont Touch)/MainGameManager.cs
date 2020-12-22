@@ -81,6 +81,7 @@ public class MainGameManager : MonoBehaviour
     public float startWaitTime;
     public int indexOffset;
     [SerializeField] private int roundsToWin;
+    [SerializeField] private Image gameBorder;
 
     private void Awake()
     {
@@ -95,6 +96,7 @@ public class MainGameManager : MonoBehaviour
         roundNumber = 1;
         _remainingGames = new List<string>();
         for(int i = 0; i < numberOfGames; i++) _remainingGames.Add(NameFromIndex(i+indexOffset));
+        gameBorder.enabled = false;
         StartCoroutine(LoadFirstGame());
     }
 
@@ -128,6 +130,7 @@ public class MainGameManager : MonoBehaviour
         yield return new WaitForSeconds(0);//TODO: Change to start wait time
         StartCoroutine(LoadNextGame());
     }
+
     
     private IEnumerator LoadNextGame()
     {
@@ -142,6 +145,7 @@ public class MainGameManager : MonoBehaviour
         ImpactWord.instance.HandleImpactText();
         yield return new WaitForSeconds(.21f);
         scene.allowSceneActivation = true;
+        gameBorder.enabled = true;
         LevelPreview.instance.HandleLevelPreview(true);
         
     }
@@ -182,6 +186,7 @@ public class MainGameManager : MonoBehaviour
         
         if (!minigame.gameWin) remainingLives -= 1;
         roundNumber++;
+        gameBorder.enabled = false;
         scene.allowSceneActivation = true;
         yield return null;
         OnShrinkMainScene();
