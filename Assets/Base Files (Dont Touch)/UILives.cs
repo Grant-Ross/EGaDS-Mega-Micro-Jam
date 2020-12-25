@@ -5,11 +5,31 @@ using UnityEngine;
 
 public class UILives : MonoBehaviour
 {
-    private void Start()
+    [SerializeField] private Animator animator;
+
+    private void Awake()
     {
-        for(int i = 0; i <= 2; i++) //TODO: CHANGE THIS
+        MainGameManager.OnMainStart += CheckLives;
+    }
+
+    private void CheckLives(bool win)
+    {
+        if(win) animator.Play("flowers-" + MainGameManager.Instance.remainingLives);
+        else
         {
-            if (i >= MainGameManager.Instance.remainingLives) transform.GetChild(i).gameObject.SetActive(false);
+            animator.Play("flowers-" + (MainGameManager.Instance.remainingLives == 3 ? 3 : MainGameManager.Instance.remainingLives + 1));
+            StartCoroutine(LoseLifeHelper());
         }
+    }
+
+    private IEnumerator LoseLifeHelper()
+    {
+        yield return new WaitForSeconds(MainGameManager.ShortTime/4);
+        animator.Play("flowers-" + MainGameManager.Instance.remainingLives);
+    }
+
+    private void OnDestroy()
+    {
+        MainGameManager.OnMainStart -= CheckLives;
     }
 }

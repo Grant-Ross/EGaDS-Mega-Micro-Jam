@@ -10,7 +10,7 @@ public class WaiterHandler : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         MainGameManager.Instance.NextGameWait += WaiterIn;
-        MainGameManager.Instance.MainStart += WaiterOut;
+        MainGameManager.OnMainStart += WaiterOut;
     }
 
     private void WaiterIn()
@@ -37,6 +37,6 @@ public class WaiterHandler : MonoBehaviour
     private void OnDestroy()
     {
         MainGameManager.Instance.NextGameWait -= WaiterIn;
-        MainGameManager.Instance.MainStart -= WaiterOut;
+        MainGameManager.OnMainStart -= WaiterOut;
     }
 }

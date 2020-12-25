@@ -11,7 +11,7 @@ public class MainScene : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         MainGameManager.Instance.GrowMainScene += GrowScene;
-        MainGameManager.Instance.MainStart += ShrinkScene;
+        MainGameManager.OnMainStart += ShrinkScene;
     }
 
     private void GrowScene()
@@ -27,6 +27,6 @@ public class MainScene : MonoBehaviour
     private void OnDestroy()
     {
         MainGameManager.Instance.GrowMainScene -= GrowScene;
-        MainGameManager.Instance.MainStart -= ShrinkScene;
+        MainGameManager.OnMainStart -= ShrinkScene;
     }
 }

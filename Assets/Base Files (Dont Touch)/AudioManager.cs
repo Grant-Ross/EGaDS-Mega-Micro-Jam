@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
         _source = gameObject.AddComponent<AudioSource>();
         //_source.clip = music[Random.Range(0, music.Length-1)];
         MainGameManager.Instance.FirstMainStart += IntroMusic;
-        MainGameManager.Instance.MainStart += StartMusic;
+        MainGameManager.OnMainStart += StartMusic;
         MainGameManager.Instance.GameOver += LoseMusic;
         _source.Play();
     }
@@ -63,7 +63,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        MainGameManager.Instance.MainStart -= StartMusic;
+        MainGameManager.OnMainStart -= StartMusic;
         MainGameManager.Instance.GameOver -= LoseMusic;
     }
 }

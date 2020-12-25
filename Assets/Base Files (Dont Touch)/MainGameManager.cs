@@ -18,8 +18,10 @@ public class MainGameManager : MonoBehaviour
 
     public event Action FirstMainStart;
     private void OnFirstMainStart() { FirstMainStart?.Invoke(); }
-    public event Action<bool> MainStart;
-    private void OnMainStart(bool win) { MainStart?.Invoke(win); }
+    public static event Action<bool> OnMainStart;
+    private static void MainStart(bool win) { OnMainStart?.Invoke(win); }
+    public static event Action OnGameStart;
+    private static void GameStart() { OnGameStart?.Invoke(); }
 
     public event Action NextGameWait;
     private void OnNextGameWait() { NextGameWait?.Invoke(); }
@@ -44,7 +46,6 @@ public class MainGameManager : MonoBehaviour
     public float startWaitTime;
     public int indexOffset;
     [SerializeField] private int roundsToWin;
-    [SerializeField] private Image gameBorder;
     [SerializeField] private bool debugBossMode;
 
     private void Awake()
@@ -59,7 +60,6 @@ public class MainGameManager : MonoBehaviour
         remainingLives = StartingLives;
         roundNumber = 1;
         _remainingGames = new List<string>();
-        gameBorder.enabled = false;
         if (debugBossMode) StartCoroutine(LoadBossGame());
         else
         {
@@ -120,7 +120,7 @@ public class MainGameManager : MonoBehaviour
         ImpactWord.instance.HandleImpactText(sceneName);
         yield return new WaitForSeconds(.21f);
         scene.allowSceneActivation = true;
-        gameBorder.enabled = true;
+        GameStart();
         LevelPreview.instance.HandleLevelPreview(true);
         
     }
@@ -157,10 +157,9 @@ public class MainGameManager : MonoBehaviour
         
         if (!minigame.gameWin) remainingLives -= 1;
         roundNumber++;
-        gameBorder.enabled = false;
         scene.allowSceneActivation = true;
         yield return null;
-        OnMainStart(minigame.gameWin);
+        MainStart(minigame.gameWin);
         if (remainingLives == 0)
         {
             yield return null;
@@ -179,7 +178,7 @@ public class MainGameManager : MonoBehaviour
     public int bossSceneIndex;
     private IEnumerator LoadBossGame()
     {
-        OnMainStart(true); // TODO: Replace with boss load music
+        MainStart(true); // TODO: Replace with boss load music
         yield return new WaitForSeconds(.1f);
         AsyncOperation scene = SceneManager.LoadSceneAsync(bossSceneIndex);
         //TODO: Change this to a boss sequence:
@@ -212,7 +211,7 @@ public class MainGameManager : MonoBehaviour
         if (!bossGame.gameWin) remainingLives -= 1;
         scene.allowSceneActivation = true;
         yield return null;
-        OnMainStart(bossGame.gameWin);
+        MainStart(bossGame.gameWin);
         if (remainingLives == 0)
         {
             Invoke(nameof(OnGameOver), ShortTime/2);

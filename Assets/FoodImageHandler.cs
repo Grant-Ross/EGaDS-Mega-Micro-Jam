@@ -20,7 +20,7 @@ public class FoodImageHandler : MonoBehaviour
     [SerializeField] private Food[] food;
     private void Awake()
     {
-        MainGameManager.Instance.MainStart += ShowFood;
+        MainGameManager.OnMainStart += ShowFood;
         MainGameManager.Instance.NextGameWait += ShowMysteryFood;
     }
 
@@ -40,7 +40,7 @@ public class FoodImageHandler : MonoBehaviour
         revealImage.enabled = true;
         animator.Play("food-reveal");
         int nextFood = Random.Range(0, food.Length);
-        while (nextFood != MainGameManager.Instance.currentFood) nextFood = Random.Range(0, food.Length);
+        while (nextFood == MainGameManager.Instance.currentFood) nextFood = Random.Range(0, food.Length);
         MainGameManager.Instance.currentFood = nextFood;
         yield return new WaitForSeconds(MainGameManager.ShortTime/4);
         foodImage.enabled = false;
@@ -48,7 +48,7 @@ public class FoodImageHandler : MonoBehaviour
     }
     private void OnDestroy()
     {
-        MainGameManager.Instance.MainStart -= ShowFood;
+        MainGameManager.OnMainStart -= ShowFood;
         MainGameManager.Instance.NextGameWait -= ShowMysteryFood;
     }
 }
