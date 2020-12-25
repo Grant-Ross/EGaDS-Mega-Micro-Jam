@@ -17,9 +17,15 @@ public class AudioManager : MonoBehaviour
     {
         _source = gameObject.AddComponent<AudioSource>();
         //_source.clip = music[Random.Range(0, music.Length-1)];
+        MainGameManager.Instance.FirstMainStart += IntroMusic;
         MainGameManager.Instance.MainStart += StartMusic;
         MainGameManager.Instance.GameOver += LoseMusic;
         _source.Play();
+    }
+
+    private void IntroMusic()
+    {
+        StartCoroutine(MainMusicStart(true)); // Replace with intro music
     }
     private void StartMusic(bool win)
     {

@@ -12,57 +12,20 @@ public class MainGameManager : MonoBehaviour
 {
     private static MainGameManager _instance;
     public static MainGameManager Instance => _instance ? _instance : FindObjectOfType<MainGameManager>();
-    public enum MainGameState
-    {
-        Main, Game
-    }
-    
-    public MainGameState gameState
-    {
-        get => _mainGameState;
-        set
-        {
-            _mainGameState = value;
-            switch (value)
-            {
-                case MainGameState.Main:
-                    mainListener.Invoke();
-                    break;
-                case MainGameState.Game:
-                    gameListener.Invoke();
-                    break;
-            }
-        }
-    }
-
-    public UnityEvent mainListener = new UnityEvent();
-    public UnityEvent gameListener = new UnityEvent();
 
     public event Action GrowMainScene;
-    public void OnGrowMainScene()
-    {
-        if(GrowMainScene != null) GrowMainScene.Invoke();
-    }
-    public event Action ShrinkMainScene;
-    public void OnShrinkMainScene()
-    {
-        if(ShrinkMainScene != null) ShrinkMainScene.Invoke();
-    }
+    public void OnGrowMainScene() { GrowMainScene?.Invoke(); }
 
+    public event Action FirstMainStart;
+    private void OnFirstMainStart() { FirstMainStart?.Invoke(); }
     public event Action<bool> MainStart;
-    public void OnMainStart(bool win)
-    {
-        if(MainStart != null) MainStart.Invoke(win);
-    }
+    private void OnMainStart(bool win) { MainStart?.Invoke(win); }
+
+    public event Action NextGameWait;
+    private void OnNextGameWait() { NextGameWait?.Invoke(); }
     
     public event Action GameOver;
-    public void OnGameOver()
-    {
-        if(GameOver != null) GameOver.Invoke();
-    }
-
-
-    private MainGameState _mainGameState;
+    public void OnGameOver() { GameOver?.Invoke(); }
     
     [SerializeField] private Text impactText;
     [SerializeField] private GameObject foodSilhouette;
@@ -91,12 +54,11 @@ public class MainGameManager : MonoBehaviour
         numberOfGames = SceneManager.sceneCountInBuildSettings - indexOffset;
         GameManager.Instance.mainGameListener.AddListener(StartGame);
     }
-    public void StartGame()
+    private void StartGame()
     {
         remainingLives = StartingLives;
         roundNumber = 1;
         _remainingGames = new List<string>();
-        for(int i = 0; i < numberOfGames; i++) _remainingGames.Add(NameFromIndex(i+indexOffset));
         gameBorder.enabled = false;
         if (debugBossMode) StartCoroutine(LoadBossGame());
         else
@@ -132,12 +94,18 @@ public class MainGameManager : MonoBehaviour
     private IEnumerator LoadFirstGame()
     {
         yield return null;
-        OnMainStart(true); // TODO: replace with start music
+        OnFirstMainStart();
         yield return new WaitForSeconds(0);//TODO: Change to start wait time
         StartCoroutine(LoadNextGame());
     }
 
-    
+    private int _currentFood;
+    public int currentFood
+    {
+        get => _currentFood;
+        set => _currentFood = value;
+    }
+
     private IEnumerator LoadNextGame()
     {
         yield return new WaitForSeconds(.1f);
@@ -145,7 +113,9 @@ public class MainGameManager : MonoBehaviour
         var sceneName = nextGame.name;
         AsyncOperation scene = SceneManager.LoadSceneAsync(nextGame.id);
         scene.allowSceneActivation = false;
-        yield return new WaitForSeconds(ShortTime - halfBeat - .31f);
+        yield return new WaitForSeconds(ShortTime/2 -.1f);
+        OnNextGameWait();
+        yield return new WaitForSeconds(ShortTime/2 - halfBeat - .21f);
         OnGrowMainScene();
         ImpactWord.instance.HandleImpactText(sceneName);
         yield return new WaitForSeconds(.21f);
@@ -160,7 +130,7 @@ public class MainGameManager : MonoBehaviour
     {
         GameInfo game = new GameInfo();
         print(_remainingGames.Count);
-        game.id = Random.Range(0, _remainingGames.Count - 1);
+        game.id = Random.Range(0, _remainingGames.Count);
         game.name = _remainingGames[game.id];
         game.id += indexOffset;
         //remainingGames.Remove(game);
@@ -190,15 +160,15 @@ public class MainGameManager : MonoBehaviour
         gameBorder.enabled = false;
         scene.allowSceneActivation = true;
         yield return null;
-        OnShrinkMainScene();
+        OnMainStart(minigame.gameWin);
         if (remainingLives == 0)
         {
             yield return null;
-            OnGameOver();
+            Invoke(nameof(OnGameOver), ShortTime/2);
         }
         else if (roundNumber <= roundsToWin)
         {
-            OnMainStart(minigame.gameWin);
+            
             StartCoroutine(LoadNextGame());
         }
         else
@@ -214,7 +184,9 @@ public class MainGameManager : MonoBehaviour
         AsyncOperation scene = SceneManager.LoadSceneAsync(bossSceneIndex);
         //TODO: Change this to a boss sequence:
         scene.allowSceneActivation = false;
-        yield return new WaitForSeconds(ShortTime - halfBeat - .31f);
+        yield return new WaitForSeconds(ShortTime/2 -.1f);
+        OnNextGameWait();
+        yield return new WaitForSeconds(ShortTime/2 - halfBeat - .21f);
         OnGrowMainScene();
         ImpactWord.instance.HandleImpactText(NameFromIndex(bossSceneIndex));
         yield return new WaitForSeconds(.21f);
@@ -240,10 +212,10 @@ public class MainGameManager : MonoBehaviour
         if (!bossGame.gameWin) remainingLives -= 1;
         scene.allowSceneActivation = true;
         yield return null;
-        OnShrinkMainScene();
+        OnMainStart(bossGame.gameWin);
         if (remainingLives == 0)
         {
-            Invoke(nameof(OnGameOver), .1f);
+            Invoke(nameof(OnGameOver), ShortTime/2);
         }
         else if (bossGame.gameWin)
         {
