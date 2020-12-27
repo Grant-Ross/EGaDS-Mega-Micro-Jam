@@ -26,6 +26,13 @@
 
 --------------------------------------------------------------------------------
 
+ > How to download this repo:
+	- Make sure the branch is set to main
+	- Click "Use this template"
+	- Set the repository name and visibility to whatever you want
+	- Leave the box that says "Include all branches" UNCHECKED
+
+--------------------------------------------------------------------------------
 
 Welcome to the EGaDS 2020 Micro-jam! Hopefully, this size of this document doesn't alarm you; please understand that a lot of standards need to be met in order to combine the works of a multitude of game devs into a single unity project
 
