@@ -16,8 +16,8 @@ public class MainGameManager : MonoBehaviour
     public event Action GrowMainScene;
     public void OnGrowMainScene() { GrowMainScene?.Invoke(); }
 
-    public static event Action FirstMainStart;
-    private static void OnFirstMainStart() { FirstMainStart?.Invoke(); }
+    public event Action FirstMainStart;
+    private void OnFirstMainStart() { FirstMainStart?.Invoke(); }
     public static event Action<bool> OnMainStart;
     private static void MainStart(bool win) { OnMainStart?.Invoke(win); }
     public static event Action OnGameStart;
@@ -37,7 +37,7 @@ public class MainGameManager : MonoBehaviour
     private const int StartingLives = 3;
     [HideInInspector] public int remainingLives;
     private int numberOfGames;
-    private List<string> _remainingGames;
+    private List<int> _remainingGames;
 
     public const float ShortTime = 3.4286f;
     private const float LongTime = 6.8571f;
@@ -59,11 +59,11 @@ public class MainGameManager : MonoBehaviour
     {
         remainingLives = StartingLives;
         roundNumber = 1;
-        _remainingGames = new List<string>();
+        _remainingGames = new List<int>();
         if (debugBossMode) StartCoroutine(LoadBossGame());
         else
         {
-            for(int i = 0; i < numberOfGames; i++) _remainingGames.Add(NameFromIndex(i+indexOffset));
+            for(int i = 0; i < numberOfGames; i++) _remainingGames.Add(i + indexOffset);
             StartCoroutine(LoadFirstGame());
         }
     }
@@ -129,11 +129,11 @@ public class MainGameManager : MonoBehaviour
     private GameInfo GetNextGame()
     {
         GameInfo game = new GameInfo();
-        print(_remainingGames.Count);
-        game.id = Random.Range(0, _remainingGames.Count);
-        game.name = _remainingGames[game.id];
-        game.id += indexOffset;
-        //remainingGames.Remove(game);
+        //print(_remainingGames.Count);
+        var gameIndex = Random.Range(0, _remainingGames.Count);
+        game.id = _remainingGames[gameIndex];
+        game.name = NameFromIndex(game.id);
+        _remainingGames.RemoveAt(gameIndex);
         return game;
     }
     
