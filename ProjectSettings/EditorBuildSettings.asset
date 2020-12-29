@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Base Files (Dont Touch)/Scenes/End.unity
     guid: 9afc0269d88532c4e882e8aef915747d
-  - enabled: 1
-    path: Assets/MyTeam - RENAME/Scene.unity
-    guid: 96f6920d3a9b1ae4f8454c21ddbb57ed
-  - enabled: 1
-    path: Assets/Up to win/Scene.unity
+  - enabled: 0
+    path: Assets/Base Files (Dont Touch)/0 GAME SUBS/9-Beez Nutz/Order Good Food.unity
     guid: d9ff06deefccc284d841371feb3b8c3c
+  - enabled: 0
+    path: Assets/Base Files (Dont Touch)/0 GAME SUBS/solo-chemicahl/Defend Your Food.unity
+    guid: a5ffd4bb0d778a241a09bdeec0f74b83
+  - enabled: 1
+    path: Assets/Base Files (Dont Touch)/0 GAME SUBS/solo-Palepiney/Add Honey.unity
+    guid: a0b7dacfba940b14f8bcec1eaf0cd1bf
   m_configObjects: {}
