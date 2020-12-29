@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10b6289b71b71e942a2499ed4eb71c02, type: 3}
-  m_Name: New Minigame
+  m_Name: HoneyCakes
   m_EditorClassIdentifier: 
   gameTime: 0
   music: {fileID: 8300000, guid: c08e4e649c6465444b423fae8c189ac9, type: 3}
+  volume: 0.615
   sounds: []
   gameWin: 0

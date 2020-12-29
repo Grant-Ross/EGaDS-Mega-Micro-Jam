@@ -61,6 +61,7 @@ public class MinigameManager : MonoBehaviour
         }
 
         _musicSource = gameObject.AddComponent<AudioSource>();
+        _musicSource.volume = minigame.volume;
         _musicSource.clip = minigame.music;
         foreach (var s in minigame.sounds)
         {

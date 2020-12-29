@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 [CreateAssetMenu(menuName = "Minigame")]
 public class Minigame : ScriptableObject
@@ -13,7 +14,7 @@ public class Minigame : ScriptableObject
         //******* ADD THESE IN THE INSPECTOR *******//
         public GameTime gameTime;
         public AudioClip music;
-
+        [Range(0, 1)] public float volume = 1;
         public SoundAsset[] sounds;
 
         //*****************************************//
