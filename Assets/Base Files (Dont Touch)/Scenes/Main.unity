@@ -926,11 +926,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6753492707297013645, guid: 299268e851095ea429ce927bf2bef866,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7258696147295923499, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
       propertyPath: m_RootOrder
@@ -946,11 +941,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8459452679400849471, guid: 299268e851095ea429ce927bf2bef866,
-        type: 3}
-      propertyPath: border
-      value: 
-      objectReference: {fileID: 1096673192}
     - target: {fileID: 8614631583959517290, guid: 299268e851095ea429ce927bf2bef866,
         type: 3}
       propertyPath: m_IsActive
@@ -1146,12 +1136,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1096673192 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5216033746573070719, guid: 299268e851095ea429ce927bf2bef866,
-    type: 3}
-  m_PrefabInstance: {fileID: 651886669}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1117956037
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,8 +16,8 @@ public class MainGameManager : MonoBehaviour
     public event Action GrowMainScene;
     public void OnGrowMainScene() { GrowMainScene?.Invoke(); }
 
-    public event Action FirstMainStart;
-    private void OnFirstMainStart() { FirstMainStart?.Invoke(); }
+    public static event Action FirstMainStart;
+    private static void OnFirstMainStart() { FirstMainStart?.Invoke(); }
     public static event Action<bool> OnMainStart;
     private static void MainStart(bool win) { OnMainStart?.Invoke(win); }
     public static event Action OnGameStart;
