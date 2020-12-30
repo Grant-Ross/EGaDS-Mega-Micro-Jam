@@ -10,26 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10b6289b71b71e942a2499ed4eb71c02, type: 3}
-  m_Name: Eatman
+  m_Name: Hunny-Bee
   m_EditorClassIdentifier: 
   gameTime: 0
-  music: {fileID: 8300000, guid: a50082cf79fc87d4aadfb481de7516f2, type: 3}
-  volume: 0.615
+  music: {fileID: 8300000, guid: 901990600f08795459a30f6bea8eceab, type: 3}
+  volume: 1
   sounds:
-  - soundName: move
-    clip: {fileID: 8300000, guid: ebc371eb5cdee47468e03ba84281dda7, type: 3}
-    volume: 0.4
-    minPitch: 0.8
-    maxPitch: 1
-    source: {fileID: 0}
-  - soundName: eat
-    clip: {fileID: 8300000, guid: 953b61aac16b34040abeee30ab48920b, type: 3}
-    volume: 1
+  - soundName: win
+    clip: {fileID: 8300000, guid: 6ae7bafe34a615d47bf75aed5c5e31ea, type: 3}
+    volume: 0.799
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
-  - soundName: die
-    clip: {fileID: 8300000, guid: ffd75ff5b7ed76e4c9926b8cbce58ab3, type: 3}
+  - soundName: pop
+    clip: {fileID: 8300000, guid: e6012a3e0b1cbe8479b63d48894ad3c9, type: 3}
     volume: 1
     minPitch: 1
     maxPitch: 1
