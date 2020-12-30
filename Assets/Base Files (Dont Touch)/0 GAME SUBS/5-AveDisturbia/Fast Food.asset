@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTime: 0
   music: {fileID: 8300000, guid: 956a7576baf8ed443a6ad9c0ef7884fd, type: 3}
+  volume: 0.817
   sounds:
   - soundName: CrashBoom
     clip: {fileID: 8300000, guid: 8143d86aeb0afdc40a1552a4ebb4f74d, type: 3}

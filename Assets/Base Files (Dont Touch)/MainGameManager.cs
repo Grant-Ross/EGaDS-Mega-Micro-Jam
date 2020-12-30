@@ -172,13 +172,12 @@ public class MainGameManager : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.LoadScene("End");
+            StartCoroutine(LoadBossGame());
         }
     }
     public int bossSceneIndex;
     private IEnumerator LoadBossGame()
     {
-        MainStart(true); // TODO: Replace with boss load music
         yield return new WaitForSeconds(.1f);
         AsyncOperation scene = SceneManager.LoadSceneAsync(bossSceneIndex);
         //TODO: Change this to a boss sequence:
