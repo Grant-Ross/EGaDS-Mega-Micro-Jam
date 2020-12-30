@@ -133,7 +133,7 @@ public class MainGameManager : MonoBehaviour
         var gameIndex = Random.Range(0, _remainingGames.Count);
         game.id = _remainingGames[gameIndex];
         game.name = NameFromIndex(game.id);
-        _remainingGames.RemoveAt(gameIndex);
+        //_remainingGames.RemoveAt(gameIndex);
         return game;
     }
     
