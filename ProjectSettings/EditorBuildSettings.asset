@@ -63,4 +63,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Base Files (Dont Touch)/0 GAME SUBS/5-AveDisturbia/Jump.unity
     guid: 7ea584eb14bd9d94c998cc317d17ccdd
+  - enabled: 1
+    path: Assets/Base Files (Dont Touch)/0 GAME SUBS/3-TBeeD/Spread The Jam.unity
+    guid: ffe9499e6b002c34ca2fb859d590f487
   m_configObjects: {}

@@ -311,7 +311,7 @@ MonoBehaviour:
   startWaitTime: 3
   indexOffset: 4
   roundsToWin: 5
-  debugBossMode: 1
+  debugBossMode: 0
   bossSceneIndex: 3
 --- !u!1 &3256082928554374614
 GameObject:
