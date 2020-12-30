@@ -16,6 +16,4 @@ public class TimerManager : MonoBehaviour
     {
         transform.GetChild(0).GetComponent<Animator>().Play(time == Minigame.GameTime.Short ? "short-timer" : "long-timer");
     }
-
-    
 }
