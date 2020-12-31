@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a078c2312ec8941acd235cf171e77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugGameOnly: 1
+  debugGameOnly: 0
   bossGame: {fileID: 11400000, guid: 288767b74e012274398aa0f38bdf5486, type: 2}
 --- !u!4 &422971736
 Transform:
@@ -1295,7 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stages:
-  - {fileID: 7609321044970692770, guid: ade2b67d91ce9234a9d7d1f36e7004c7, type: 3}
+  - {fileID: 4323375850073054468, guid: bd77cba5e8badf84889793deee7e9617, type: 3}
   - {fileID: 9053899735557351783, guid: a075922547c18534aa3b6a71262f6109, type: 3}
   - {fileID: 8947026096297015935, guid: 9db200838ec7c4c4886dafea58e46ca4, type: 3}
   - {fileID: 8125466233353031921, guid: 4847b7a603bbe8545a3d8e234dedccca, type: 3}

@@ -1536,7 +1536,7 @@ MonoBehaviour:
     type: 3}
   introName: Dodge!
   rocketHit: {fileID: 7272560229922587445}
-  stageLength: 18
+  stageLength: 19
   finalRound: 0
 --- !u!1 &7700480901158614246
 GameObject:
