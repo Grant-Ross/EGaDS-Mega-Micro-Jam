@@ -11,12 +11,14 @@ namespace BeeNice {
         public SpriteRenderer sprtRnd;
         public Sprite[] sprites;
         public float maxRotation;
+        public SpriteRenderer outline;
         // Start is called before the first frame update
         void Start()
         {
             sprtRnd.sprite = sprites[Random.Range(0, sprites.Length)];
             rb.velocity = fallSpeed;
             rb.angularVelocity = Random.Range(-maxRotation, maxRotation);
+            outline.sprite = sprtRnd.sprite;
         }
 
     }

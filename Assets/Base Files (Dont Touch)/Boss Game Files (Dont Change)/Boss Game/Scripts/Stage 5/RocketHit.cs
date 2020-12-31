@@ -62,10 +62,11 @@ namespace BeeNice
                 shakeDuration = 0f;
                 //transform.localPosition = initialPosition;
                 initialPosition = transform.localPosition;
-                if (gameOver)
-                {
-                    Stage5.instance.LoseGame();
-                }
+                
+            }
+            if (gameOver)
+            {
+                Stage5.instance.LoseGame();
             }
         }
     }
