@@ -257,7 +257,7 @@ MonoBehaviour:
   endScreenListener:
     m_PersistentCalls:
       m_Calls: []
-  roundsToWin: 5
+  roundsToWin: 1
 --- !u!1 &3024076375283223524
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   remainingLives: 3
   startWaitTime: 3
   indexOffset: 4
-  roundsToWin: 5
+  roundsToWin: 15
   debugBossMode: 0
   bossSceneIndex: 3
 --- !u!1 &3256082928554374614

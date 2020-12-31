@@ -189,6 +189,7 @@ public class MainGameManager : MonoBehaviour
         ImpactWord.instance.HandleImpactText(NameFromIndex(bossSceneIndex));
         yield return new WaitForSeconds(.21f);
         scene.allowSceneActivation = true;
+        GameStart();
         LevelPreview.instance.HandleLevelPreview(true);
         
     }
