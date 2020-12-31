@@ -47,6 +47,7 @@ public class MainGameManager : MonoBehaviour
     public int indexOffset;
     [SerializeField] private int roundsToWin;
     [SerializeField] private bool debugBossMode;
+    [SerializeField] private bool testMode;
 
     private void Awake()
     {
@@ -133,7 +134,7 @@ public class MainGameManager : MonoBehaviour
         var gameIndex = Random.Range(0, _remainingGames.Count);
         game.id = _remainingGames[gameIndex];
         game.name = NameFromIndex(game.id);
-        //_remainingGames.RemoveAt(gameIndex);
+        if(!testMode)_remainingGames.RemoveAt(gameIndex);
         return game;
     }
     
