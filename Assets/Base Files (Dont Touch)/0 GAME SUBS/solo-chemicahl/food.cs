@@ -83,7 +83,7 @@ namespace chemicahl
         {
             yield return new WaitForSeconds(1.0f);
             //MinigameManager.Instance.PlaySound("gullcoming2");
-            Debug.Log("second sound");
+            //Debug.Log("second sound");
         }
 
 

@@ -27,8 +27,8 @@ namespace chemicahl
         // Start is called before the first frame update
         void Start()
         {
-            path1x = (Vector3.right * Time.deltaTime);
-            path1y = (Vector3.down * Time.deltaTime);
+            path1x = (Vector3.right * .009f);
+            path1y = (Vector3.down * .009f);
 
             path2x = (Vector3.left * Time.deltaTime);
             path2y = (Vector3.down * Time.deltaTime);
@@ -63,7 +63,7 @@ namespace chemicahl
         void path1()
         {
             transform.Translate(path1x);//moves object sideways
-            transform.Translate(path1y, Space.World);//moves object down
+            transform.Translate(path1y);//moves object down
             //Debug.Log("path1");
             //Debug.Log(transform.position.x);
             //Debug.Log("help");
