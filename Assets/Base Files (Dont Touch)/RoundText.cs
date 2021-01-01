@@ -11,5 +11,16 @@ public class RoundText : MonoBehaviour
     private void Start()
     {
         roundText.text = MainGameManager.Instance.roundNumber.ToString();
+        MainGameManager.Instance.GameOver += GameLose;
+    }
+
+    private void GameLose()
+    {
+        gameObject.SetActive(false);
+    }
+    
+    private void OnDestroy()
+    {
+        MainGameManager.Instance.GameOver -= GameLose;
     }
 }

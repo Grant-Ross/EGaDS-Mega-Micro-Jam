@@ -49,6 +49,7 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private bool debugBossMode;
     [SerializeField] private bool testMode;
     private bool firstBossTry;
+    [HideInInspector] public bool gameOver;
 
     private void Awake()
     {
@@ -63,6 +64,7 @@ public class MainGameManager : MonoBehaviour
         roundNumber = 1;
         _remainingGames = new List<int>();
         firstBossTry = true;
+        gameOver = false;
         if (debugBossMode) StartCoroutine(LoadBossGame());
         else
         {
@@ -98,7 +100,7 @@ public class MainGameManager : MonoBehaviour
     {
         yield return null;
         OnFirstMainStart();
-        yield return new WaitForSeconds(0);//TODO: Change to start wait time
+        yield return new WaitForSeconds(ShortTime + halfBeat);//TODO: Change to start wait time
         StartCoroutine(LoadNextGame());
     }
 
@@ -165,7 +167,8 @@ public class MainGameManager : MonoBehaviour
         MainStart(minigame.gameWin);
         if (remainingLives == 0)
         {
-            yield return null;
+            //yield return null;
+            gameOver = true;
             Invoke(nameof(OnGameOver), ShortTime/2);
         }
         else if (roundNumber <= roundsToWin)
@@ -217,6 +220,7 @@ public class MainGameManager : MonoBehaviour
         MainStart(bossGame.gameWin);
         if (remainingLives == 0)
         {
+            gameOver = true;
             Invoke(nameof(OnGameOver), ShortTime/2);
         }
         else if (bossGame.gameWin)

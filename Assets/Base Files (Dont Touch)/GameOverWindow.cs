@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameOverWindow : MonoBehaviour
 {
     [SerializeField] private GameObject window;
-
+    [SerializeField] private Animator drip;
+    [SerializeField] private Animator restaurant;
     private void Awake()
     {
         window.SetActive(false);
@@ -16,9 +17,10 @@ public class GameOverWindow : MonoBehaviour
 
     private void GameLose()
     {
-        transform.GetChild(0).gameObject.SetActive(true);
+        window.SetActive(true);
+        drip.Play("drip-down");
+        restaurant.Play("back-fade");
     }
-
     public void RestartButton()
     {
         window.SetActive(false);
