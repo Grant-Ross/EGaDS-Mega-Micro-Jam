@@ -11,6 +11,7 @@ namespace ApplesOrBees
         public Vector2 target;
         public float speed;
         private Vector2 position;
+        //private bool soundShouldPlay; // set this elsewhere in code
 
         // Start called before first frame update
         void Start()
@@ -20,6 +21,7 @@ namespace ApplesOrBees
             speed = 3.0f;
             gameObject.GetComponent<Renderer>().enabled = false;
             MinigameManager.Instance.minigame.gameWin = false;
+            MinigameManager.Instance.PlaySound("lofibackground");
         }
 
         //Update called once per frame

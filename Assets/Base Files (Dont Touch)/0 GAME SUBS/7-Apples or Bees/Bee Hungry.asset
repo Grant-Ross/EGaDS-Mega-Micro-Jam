@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Bee Hungry
   m_EditorClassIdentifier: 
   gameTime: 0
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 3f76d8f6001650842bfe288937ab9195, type: 3}
   sounds: []
   gameWin: 0

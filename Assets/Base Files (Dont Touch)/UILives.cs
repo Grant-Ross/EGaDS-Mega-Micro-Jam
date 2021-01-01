@@ -25,7 +25,7 @@ public class UILives : MonoBehaviour
     private IEnumerator LoseLifeHelper()
     {
         yield return new WaitForSeconds(MainGameManager.ShortTime/4);
-        animator.Play("flowers-" + MainGameManager.Instance.remainingLives);
+        animator.Play("flowers-die-" + MainGameManager.Instance.remainingLives); 
     }
 
     private void OnDestroy()

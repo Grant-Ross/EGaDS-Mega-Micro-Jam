@@ -41,12 +41,8 @@ namespace karina
             MinigameManager.Instance.PlaySound("ding");
         }
 
-        void Update()
-        {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
-            rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
-        }
+        private bool inputReady;
+
 
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -65,14 +61,22 @@ namespace karina
                 render.sprite = handSprites[(int)myStage];
             }
         }
-
+        void Update()
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+            rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
+            if(Input.GetKeyDown("space")) inputReady = true;
+        }
+        
         //pick up item in hand and give to customer
         void OnTriggerStay2D(Collider2D other)
         {
-            if (!gameOver)
-            { 
+            if (!gameOver && inputReady)
+            {
+                inputReady = false;
                 //pick up drink and/or put down other item
-                if ((Input.GetKeyDown("space")) && (other.gameObject.tag == "Object 1"))
+                if (other.gameObject.tag == "Object 1")
                 {
                                
                     fries.GetComponent<SpriteRenderer>().enabled = true;
@@ -88,7 +92,7 @@ namespace karina
                 }
 
                 //pick up fries and/or put down other item
-                else if ((Input.GetKeyDown("space")) && (other.gameObject.tag == "Object 2"))
+                else if (other.gameObject.tag == "Object 2")
                 {
                     drink.GetComponent<SpriteRenderer>().enabled = true;
                     borgar.GetComponent<SpriteRenderer>().enabled = true;
@@ -103,7 +107,7 @@ namespace karina
                 }
 
                 //pick up borgar and/or put down other item
-                else if ((Input.GetKeyDown("space")) && (other.gameObject.tag == "Object 3"))
+                else if (other.gameObject.tag == "Object 3")
                 {
                     drink.GetComponent<SpriteRenderer>().enabled = true;
                     fries.GetComponent<SpriteRenderer>().enabled = true;
@@ -119,7 +123,7 @@ namespace karina
 
 
                 //give to customer
-                if ((Input.GetKeyDown("space")) && (other.gameObject.tag == "Object 4") && myStage == inHand.drink)
+                if (other.gameObject.tag == "Object 4" && myStage == inHand.drink)
                 {
                     if ((OrderManager.customerOrder == "drink") && (myStage == inHand.drink))
                     {
@@ -149,9 +153,9 @@ namespace karina
                     MinigameManager.Instance.PlaySound("pop");
                 }
 
-                else if ((Input.GetKeyDown("space")) && (other.gameObject.tag == "Object 4") && myStage == inHand.fries)
+                else if (other.gameObject.tag == "Object 4" && myStage == inHand.fries)
                 {
-                    if ((OrderManager.customerOrder == "fries") && (myStage == inHand.fries))
+                    if (OrderManager.customerOrder == "fries" && myStage == inHand.fries)
                     {
                         //Debug.Log("win");
                         MinigameManager.Instance.minigame.gameWin = true;
@@ -177,7 +181,7 @@ namespace karina
                     MinigameManager.Instance.PlaySound("pop");
                 }
 
-                else if ((Input.GetKeyDown("space")) && (other.gameObject.tag == "Object 4") && myStage == inHand.borgar)
+                else if (other.gameObject.tag == "Object 4" && myStage == inHand.borgar)
                 {
                     if ((OrderManager.customerOrder == "borgar") && (myStage == inHand.borgar))
                     {

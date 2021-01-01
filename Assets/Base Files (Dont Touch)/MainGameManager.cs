@@ -48,6 +48,7 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private int roundsToWin;
     [SerializeField] private bool debugBossMode;
     [SerializeField] private bool testMode;
+    private bool firstBossTry;
 
     private void Awake()
     {
@@ -61,6 +62,7 @@ public class MainGameManager : MonoBehaviour
         remainingLives = StartingLives;
         roundNumber = 1;
         _remainingGames = new List<int>();
+        firstBossTry = true;
         if (debugBossMode) StartCoroutine(LoadBossGame());
         else
         {
