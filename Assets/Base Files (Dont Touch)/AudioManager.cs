@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip successMusic;
     [SerializeField] private AudioClip failureMusic;
     [SerializeField] private AudioClip gameOverMusic;
+    [SerializeField] private AudioClip startMusic;
+
     private float _volume = 1;
     private AudioSource _source;
 
@@ -25,8 +27,19 @@ public class AudioManager : MonoBehaviour
 
     private void IntroMusic()
     {
-        StartCoroutine(MainMusicStart(true)); // Replace with intro music
+        StartCoroutine(IntroMusicSequence()); // Replace with intro music
     }
+
+    private IEnumerator IntroMusicSequence()
+    {
+        _source.volume = _volume;
+        _source.clip = startMusic;
+        _source.Play();
+        yield return new WaitForSeconds(MainGameManager.ShortTime * 1.5f + MainGameManager.halfBeat);
+        _source.clip = readyMusic;
+        _source.Play();
+    }
+    
     private void StartMusic(bool win)
     {
         StartCoroutine(MainMusicStart(win));
@@ -38,6 +51,7 @@ public class AudioManager : MonoBehaviour
         _source.volume = _volume;
         _source.Play();
         yield return new WaitForSeconds(MainGameManager.ShortTime / 2);
+        if (MainGameManager.Instance.gameOver) yield break;
         _source.clip = readyMusic;
         _source.Play();
         yield return new WaitForSeconds(MainGameManager.ShortTime / 2);
