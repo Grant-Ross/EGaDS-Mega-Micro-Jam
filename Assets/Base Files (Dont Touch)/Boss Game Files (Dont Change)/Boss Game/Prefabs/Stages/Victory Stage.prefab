@@ -800,7 +800,10 @@ MonoBehaviour:
   gameWon:
     m_PersistentCalls:
       m_Calls: []
-  stageLength: 14
+  introText: {fileID: 0}
+  introName: 
+  rocketHit: {fileID: 0}
+  stageLength: 10
   finalRound: 1
 --- !u!1 &9193287558968920522
 GameObject:

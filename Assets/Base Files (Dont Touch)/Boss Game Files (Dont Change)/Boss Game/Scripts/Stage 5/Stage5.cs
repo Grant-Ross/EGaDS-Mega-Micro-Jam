@@ -19,12 +19,7 @@ namespace BeeNice
         }
         private IEnumerator EndStage(float delay)
         {
-            yield return new WaitForSeconds(stageLength - 1.5f);
-            if (finalRound)
-            {
-                BossGameManager.Instance.PlaySound("victory");
-            }
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(stageLength);
             gameWon.Invoke();
             if (rocketHit != null) {
                 rocketHit.shouldPlay = false;
