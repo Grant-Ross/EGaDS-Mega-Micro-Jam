@@ -25,5 +25,6 @@ public class BeeHandler : MonoBehaviour
     private void OnDestroy()
     {
         MainGameManager.OnMainStart -= BeeAnimation;
+        MainGameManager.Instance.GameOver -= BeeDie;
     }
 }

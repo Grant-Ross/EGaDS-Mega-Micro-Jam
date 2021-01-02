@@ -382,7 +382,7 @@ MonoBehaviour:
   remainingLives: 3
   startWaitTime: 3
   indexOffset: 6
-  roundsToWin: 15
+  roundsToWin: 1
   debugBossMode: 0
   testMode: 1
   gameOver: 0
@@ -440,8 +440,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 32784beb12745af47b363c5ffb8d8b41, type: 3}
     volume: 0.7
   gameOverMusic:
-    clip: {fileID: 8300000, guid: fcf6f944ac8adbf4c8d58118cd7593e2, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 601c613d30cec8a42a3b38d45f61f258, type: 3}
+    volume: 0.7
   startMusic:
     clip: {fileID: 8300000, guid: d135922c3fcbbf842890909f0830b278, type: 3}
     volume: 0.7

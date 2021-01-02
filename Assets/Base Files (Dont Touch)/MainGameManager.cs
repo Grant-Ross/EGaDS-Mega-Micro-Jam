@@ -182,14 +182,22 @@ public class MainGameManager : MonoBehaviour
         }
     }
     public int bossSceneIndex;
+    
     private IEnumerator LoadBossGame()
     {
         yield return new WaitForSeconds(.1f);
         AsyncOperation scene = SceneManager.LoadSceneAsync(bossSceneIndex);
-        //TODO: Change this to a boss sequence:
         scene.allowSceneActivation = false;
-        yield return new WaitForSeconds(ShortTime/2 -.1f);
+        yield return new WaitForSeconds(ShortTime/2 - .15f);
+        if (firstBossTry)
+        {
+            
+            FindObjectOfType<BossAlertHandler>().BossAlert();
+            yield return new WaitForSeconds(ShortTime);
+            FindObjectOfType<AudioManager>().PlayReady();
+        }
         OnNextGameWait();
+
         yield return new WaitForSeconds(ShortTime/2 - halfBeat - .21f);
         OnGrowMainScene();
         ImpactWord.instance.HandleImpactText(NameFromIndex(bossSceneIndex));
@@ -215,6 +223,7 @@ public class MainGameManager : MonoBehaviour
         yield return new WaitForSeconds(halfBeat);
         
         if (!bossGame.gameWin) remainingLives -= 1;
+        firstBossTry = false;
         scene.allowSceneActivation = true;
         yield return null;
         MainStart(bossGame.gameWin);
