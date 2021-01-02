@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private Music gameOverMusic;
     [SerializeField] private Music startMusic;
     [SerializeField] private Music cutsceneMusic;
+    [SerializeField] private Music title;
     
     private AudioSource _source;
 
@@ -24,10 +25,16 @@ public class AudioManager : MonoBehaviour
     {
         _source = gameObject.AddComponent<AudioSource>();
         //_source.clip = music[Random.Range(0, music.Length-1)];
+        GameManager.Instance.titleScreenListener.AddListener(TitleMusic);
         MainGameManager.Instance.FirstMainStart += IntroMusic;
         MainGameManager.OnMainStart += StartMusic;
         MainGameManager.Instance.GameOver += LoseMusic;
         _source.Play();
+    }
+
+    private void TitleMusic()
+    {
+        PlayMusic(title);
     }
 
     public void CutsceneMusic()
