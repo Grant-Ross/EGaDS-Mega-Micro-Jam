@@ -60,6 +60,7 @@ public class AudioManager : MonoBehaviour
     private void StartMusic(bool win)
     {
         _source.loop = false;
+        if (MainGameManager.Instance.gameWin) return;
         StartCoroutine(MainMusicStart(win));
     }
 
