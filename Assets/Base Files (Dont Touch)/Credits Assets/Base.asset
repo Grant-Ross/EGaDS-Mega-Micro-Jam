@@ -16,4 +16,5 @@ MonoBehaviour:
   text: "Base Project\nBase Project Design, Programming & Music - Grant Ross\nBase
     Project Programming - Alex Huang\nBase Project Art - Karina Teryua & Terry Nguyen
     \nMusic and SFX Resources - Grant Ross, Matthew Zhang, David Lee"
-  screenshot: []
+  screenshot:
+  - {fileID: 0}

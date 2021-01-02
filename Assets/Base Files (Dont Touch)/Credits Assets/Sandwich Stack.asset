@@ -21,4 +21,5 @@ MonoBehaviour:
 
     Jesus
     Salinas - Art'
-  screenshot: []
+  screenshot:
+  - {fileID: 0}

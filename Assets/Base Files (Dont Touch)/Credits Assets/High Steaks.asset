@@ -21,4 +21,5 @@ MonoBehaviour:
     - Art
 
     Amy Li - Art'
-  screenshot: []
+  screenshot:
+  - {fileID: 0}

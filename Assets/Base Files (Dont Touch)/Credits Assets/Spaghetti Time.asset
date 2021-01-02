@@ -17,8 +17,8 @@ MonoBehaviour:
 
     Zoe Orgish - Programming & Art
 
-    Garret Wied -
-    Programming & Animation
+    Garret Wied - Programming
+    & Animation
 
     Sarash Huseth - Art
 
@@ -26,3 +26,5 @@ MonoBehaviour:
 
     Alvert
     Escobedo - Sound'
+  screenshot:
+  - {fileID: 0}

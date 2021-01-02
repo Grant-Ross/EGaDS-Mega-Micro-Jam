@@ -26,4 +26,5 @@ MonoBehaviour:
     Lin - Game Design & Sound Design
 
     Samuel Choi - Music & Vocals'
-  screenshot: []
+  screenshot:
+  - {fileID: 0}

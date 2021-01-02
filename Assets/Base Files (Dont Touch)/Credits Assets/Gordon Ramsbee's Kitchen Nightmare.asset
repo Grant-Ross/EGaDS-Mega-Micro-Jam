@@ -17,4 +17,5 @@ MonoBehaviour:
     Programming\r\nAle Acevedo (Bandcamp, @g\xFCey)- Audio\r\nTerry Nguyen (Twitter,
     @deth2loremonger)- Art, Programming\r\nJimmy Liu (ArtStation, @jimjimthebard)- 
     Art"
-  screenshot: []
+  screenshot:
+  - {fileID: 0}

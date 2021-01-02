@@ -21,4 +21,5 @@ MonoBehaviour:
     Art & Sprites
 
     Seth Eastman - Design & Concept Art'
-  screenshot: []
+  screenshot:
+  - {fileID: 0}
