@@ -171,7 +171,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78224cee159f47d4ab94ffaec0bb5c65, type: 2}
   panelToParent: {fileID: 741683440}
   moveRb: {fileID: 741683443}
-  moveSpeed: 80
+  moveSpeed: 60
   speedMultiplier: 20
   creditPanelTemplates:
   - {fileID: 2077299767609302312, guid: 17483d57fce2a9c41a5204d6f77a9342, type: 3}
