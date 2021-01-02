@@ -381,7 +381,7 @@ MonoBehaviour:
   roundNumber: 0
   remainingLives: 3
   startWaitTime: 3
-  indexOffset: 7
+  indexOffset: 6
   roundsToWin: 15
   debugBossMode: 0
   testMode: 1
