@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Base Files (Dont Touch)/0 Scenes/Credits.unity
     guid: 9847ffd9f95d2504c9ffca4319ac2544
-  - enabled: 0
+  - enabled: 1
     path: Assets/Base Files (Dont Touch)/0 GAME SUBS/9-Beez Nutz/Order Good Food.unity
     guid: d9ff06deefccc284d841371feb3b8c3c
   - enabled: 1
@@ -69,7 +69,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Base Files (Dont Touch)/0 GAME SUBS/2-ThePoggersGamers/Eat Honey.unity
     guid: d86c606380d17ad4da3075c68c0b531f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Base Files (Dont Touch)/0 GAME SUBS/5-AveDisturbia/Jump.unity
     guid: 7ea584eb14bd9d94c998cc317d17ccdd
   - enabled: 0
@@ -93,7 +93,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Base Files (Dont Touch)/0 GAME SUBS/solo-karina/Serve Food.unity
     guid: 24baba97517bd3743a566d9a204749ad
-  - enabled: 0
+  - enabled: 1
     path: Assets/Base Files (Dont Touch)/0 GAME SUBS/7-Apples or Bees/To the flower.unity
     guid: 4274032a5de9f2a4ca1715f1f35d1785
   m_configObjects: {}
