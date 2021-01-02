@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: CreditsScrollMaterial
   m_Shader: {fileID: 4800000, guid: 394c4f176f5536f4bb94d7006b076c88, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -73,8 +73,8 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpeedX: 0.02
-    - _SpeedY: 0.07
+    - _SpeedX: 0
+    - _SpeedY: -0.02
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

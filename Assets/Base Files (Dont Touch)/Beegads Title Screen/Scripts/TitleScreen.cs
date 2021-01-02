@@ -19,5 +19,10 @@ namespace Terry
         {
             Application.Quit();
         }
+
+        public void CreditsButton()
+        {
+            GameManager.Instance.LoadScene("Credits");
+        }
     }
 }
