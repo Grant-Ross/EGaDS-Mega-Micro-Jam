@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a310927217b534f429fcc634429032dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 30
   rb: {fileID: 523465764}
   drink: {fileID: 33232561}
   fries: {fileID: 1675835371}

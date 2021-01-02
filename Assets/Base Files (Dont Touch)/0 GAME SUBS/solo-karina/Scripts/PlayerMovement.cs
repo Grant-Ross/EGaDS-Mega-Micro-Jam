@@ -61,12 +61,15 @@ namespace karina
                 render.sprite = handSprites[(int)myStage];
             }
         }
-        void Update()
+        private void Update()
+        {
+            if(Input.GetKeyDown("space")) inputReady = true;
+        }
+        void FixedUpdate()
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
             rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
-            if(Input.GetKeyDown("space")) inputReady = true;
         }
         
         //pick up item in hand and give to customer
