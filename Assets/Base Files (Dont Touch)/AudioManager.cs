@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
-    [Serializable] private struct Music
+    [Serializable] public struct Music
     {
         public AudioClip clip;
         [Range(0, 1)] public float volume;
@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private Music cutsceneMusic;
     [SerializeField] private Music title;
     
-    private AudioSource _source;
+    public AudioSource _source;
 
     private void Awake()
     {
@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour
 
     private void TitleMusic()
     {
+        _source.loop = true;
         PlayMusic(title);
     }
 
@@ -45,6 +46,7 @@ public class AudioManager : MonoBehaviour
     private void IntroMusic()
     {
         //PlayMusic(startMusic);
+        _source.loop = false;
         StartCoroutine(IntroMusicSequence());
     }
 
@@ -57,6 +59,7 @@ public class AudioManager : MonoBehaviour
     
     private void StartMusic(bool win)
     {
+        _source.loop = false;
         StartCoroutine(MainMusicStart(win));
     }
 
@@ -73,11 +76,13 @@ public class AudioManager : MonoBehaviour
 
     private void LoseMusic()
     {
+        _source.loop = false;
         PlayMusic(gameOverMusic);
     }
 
     private IEnumerator FadeMusic()
     {
+        if(MainGameManager.Instance.gameOver) yield break;
         while (_source.volume > .1f)
         {
             _source.volume -= .05f;
@@ -86,11 +91,16 @@ public class AudioManager : MonoBehaviour
         _source.Stop();
     }
 
-    private void PlayMusic(Music m)
+    public void PlayMusic(Music m)
     {
         _source.volume = m.volume;
         _source.clip = m.clip;
         _source.Play();
+    }
+
+    public void PlayReady()
+    {
+        PlayMusic(readyMusic);
     }
 
     private void OnDestroy()
