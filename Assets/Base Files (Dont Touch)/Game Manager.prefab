@@ -310,9 +310,9 @@ MonoBehaviour:
   indexOffset: 6
   roundsToWin: 15
   debugBossMode: 0
-  testMode: 0
+  testMode: 1
   gameOver: 0
-  bossSceneIndex: 5
+  bossSceneIndex: 4
 --- !u!1 &3256082928554374614
 GameObject:
   m_ObjectHideFlags: 0

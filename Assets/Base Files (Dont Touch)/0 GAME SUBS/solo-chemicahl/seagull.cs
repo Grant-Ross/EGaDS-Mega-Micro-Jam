@@ -27,8 +27,8 @@ namespace chemicahl
         // Start is called before the first frame update
         void Start()
         {
-            path1x = (Vector3.right * .009f);
-            path1y = (Vector3.down * .009f);
+            path1x = (Vector3.right * .05f);
+            path1y = (Vector3.down * .05f);
 
             path2x = (Vector3.left * Time.deltaTime);
             path2y = (Vector3.down * Time.deltaTime);
@@ -42,7 +42,7 @@ namespace chemicahl
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
 
             if (pathNum == 1)
