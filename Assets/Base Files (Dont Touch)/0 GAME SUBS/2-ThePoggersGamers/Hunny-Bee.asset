@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTime: 0
   music: {fileID: 8300000, guid: 901990600f08795459a30f6bea8eceab, type: 3}
-  volume: 1
+  volume: 0.812
   sounds:
   - soundName: win
     clip: {fileID: 8300000, guid: 6ae7bafe34a615d47bf75aed5c5e31ea, type: 3}
@@ -28,4 +28,4 @@ MonoBehaviour:
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
-  gameWin: 0
+  gameWin: 1
