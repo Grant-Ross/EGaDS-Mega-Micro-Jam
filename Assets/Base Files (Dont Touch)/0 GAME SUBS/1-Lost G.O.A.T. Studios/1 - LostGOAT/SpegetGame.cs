@@ -31,12 +31,13 @@ namespace LostGOAT
 
         [SerializeField] private GameObject dance;
         [SerializeField] private GameObject sad;
-
+        
         private void Awake()
         {
             for (int x = -900; x < 450; x += 450)
             {
-                GameObject meatball = Instantiate(Keys[Random.Range(0, Keys.Length)], new Vector3(x-450, 31.30005f, 0), Quaternion.identity);
+                GameObject meatball = Instantiate(Keys[Random.Range(0, Keys.Length)], new Vector2(x-450, 31.30005f), Quaternion.identity);
+                
                 meatball.transform.SetParent(screen.transform, false);
             }
             sad.SetActive(false);
