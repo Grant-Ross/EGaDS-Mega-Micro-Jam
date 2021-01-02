@@ -83,7 +83,7 @@ public class CreditsController : MonoBehaviour
             {
                 panelInst = Instantiate(creditPanelTemplates[1], panelToParent).GetComponent<PanelController>();
             }
-            panelInst.UpdateFields(creditPanels[i].screenshot[0], lineSplit[0], lineSplit[1]);
+            panelInst.UpdateFields(panel.screenshot[i - 1], lineSplit[0], lineSplit[1]);
             panelToParent = (RectTransform)panelInst.transform;
         }
     }
