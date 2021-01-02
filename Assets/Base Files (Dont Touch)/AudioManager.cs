@@ -6,13 +6,18 @@ using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip readyMusic;
-    [SerializeField] private AudioClip successMusic;
-    [SerializeField] private AudioClip failureMusic;
-    [SerializeField] private AudioClip gameOverMusic;
-    [SerializeField] private AudioClip startMusic;
-
-    private float _volume = 1;
+    [Serializable] private struct Music
+    {
+        public AudioClip clip;
+        [Range(0, 1)] public float volume;
+    }
+    [SerializeField] private Music readyMusic;
+    [SerializeField] private Music successMusic;
+    [SerializeField] private Music failureMusic;
+    [SerializeField] private Music gameOverMusic;
+    [SerializeField] private Music startMusic;
+    [SerializeField] private Music cutsceneMusic;
+    
     private AudioSource _source;
 
     private void Awake()
@@ -25,19 +30,22 @@ public class AudioManager : MonoBehaviour
         _source.Play();
     }
 
+    public void CutsceneMusic()
+    {
+        PlayMusic(cutsceneMusic);
+    }
+
     private void IntroMusic()
     {
-        StartCoroutine(IntroMusicSequence()); // Replace with intro music
+        //PlayMusic(startMusic);
+        StartCoroutine(IntroMusicSequence());
     }
 
     private IEnumerator IntroMusicSequence()
     {
-        _source.volume = _volume;
-        _source.clip = startMusic;
-        _source.Play();
-        yield return new WaitForSeconds(MainGameManager.ShortTime * 1.5f + MainGameManager.halfBeat);
-        _source.clip = readyMusic;
-        _source.Play();
+        PlayMusic(startMusic);
+        yield return new WaitForSeconds(MainGameManager.ShortTime * 2 + MainGameManager.halfBeat);
+        StartCoroutine(FadeMusic());
     }
     
     private void StartMusic(bool win)
@@ -47,22 +55,18 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator MainMusicStart(bool win)
     {
-        _source.clip = win ? successMusic : failureMusic;
-        _source.volume = _volume;
-        _source.Play();
-        yield return new WaitForSeconds(MainGameManager.ShortTime / 2);
+        PlayMusic(win ? successMusic : failureMusic);
+        /*yield return new WaitForSeconds(MainGameManager.ShortTime / 2);
         if (MainGameManager.Instance.gameOver) yield break;
-        _source.clip = readyMusic;
-        _source.Play();
-        yield return new WaitForSeconds(MainGameManager.ShortTime / 2);
+        PlayMusic(readyMusic);
+        yield return new WaitForSeconds(MainGameManager.ShortTime / 2);*/
+        yield return new WaitForSeconds(MainGameManager.ShortTime);
         StartCoroutine(FadeMusic());
     }
 
     private void LoseMusic()
     {
-        _source.clip = gameOverMusic;
-        _source.volume = _volume;
-        _source.Play();
+        PlayMusic(gameOverMusic);
     }
 
     private IEnumerator FadeMusic()
@@ -73,6 +77,13 @@ public class AudioManager : MonoBehaviour
             yield return new WaitForSeconds(.02f);
         }
         _source.Stop();
+    }
+
+    private void PlayMusic(Music m)
+    {
+        _source.volume = m.volume;
+        _source.clip = m.clip;
+        _source.Play();
     }
 
     private void OnDestroy()

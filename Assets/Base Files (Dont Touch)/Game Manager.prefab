@@ -256,7 +256,6 @@ MonoBehaviour:
   endScreenListener:
     m_PersistentCalls:
       m_Calls: []
-  roundsToWin: 1
 --- !u!1 &3024076375283223524
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,11 +307,12 @@ MonoBehaviour:
   roundNumber: 0
   remainingLives: 3
   startWaitTime: 3
-  indexOffset: 4
+  indexOffset: 6
   roundsToWin: 15
   debugBossMode: 0
   testMode: 0
-  bossSceneIndex: 3
+  gameOver: 0
+  bossSceneIndex: 5
 --- !u!1 &3256082928554374614
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,11 +356,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e72f900d345c2843984e283925ba51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  readyMusic: {fileID: 8300000, guid: 334d9c6177ac6a842ba8c2cb56a2a8dd, type: 3}
-  successMusic: {fileID: 8300000, guid: bbca822326e7caa46bdf223c99282ef7, type: 3}
-  failureMusic: {fileID: 8300000, guid: 785daa7603137864b953b12c93eba363, type: 3}
-  gameOverMusic: {fileID: 8300000, guid: fcf6f944ac8adbf4c8d58118cd7593e2, type: 3}
-  startMusic: {fileID: 8300000, guid: a074c11f2988d9343ac282e1aba10e63, type: 3}
+  readyMusic:
+    clip: {fileID: 8300000, guid: 334d9c6177ac6a842ba8c2cb56a2a8dd, type: 3}
+    volume: 0.7
+  successMusic:
+    clip: {fileID: 8300000, guid: 6d074fb07331df647bda47b66ae49d66, type: 3}
+    volume: 0.7
+  failureMusic:
+    clip: {fileID: 8300000, guid: 32784beb12745af47b363c5ffb8d8b41, type: 3}
+    volume: 0.7
+  gameOverMusic:
+    clip: {fileID: 8300000, guid: fcf6f944ac8adbf4c8d58118cd7593e2, type: 3}
+    volume: 1
+  startMusic:
+    clip: {fileID: 8300000, guid: d135922c3fcbbf842890909f0830b278, type: 3}
+    volume: 0.7
+  cutsceneMusic:
+    clip: {fileID: 8300000, guid: 3ff37ad6e453e89498da22f1cbfe275d, type: 3}
+    volume: 0.707
 --- !u!1 &3709636028936260919
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,7 +27,7 @@ public class FoodImageHandler : MonoBehaviour
     private void ShowMysteryFood() { StartCoroutine(MysteryFoodHelper()); }
     private IEnumerator MysteryFoodHelper()
     {
-        yield return new WaitForSeconds(MainGameManager.ShortTime/4);
+        yield return new WaitForSeconds(MainGameManager.ShortTime/4 - .2f);
         foodImage.sprite = food[MainGameManager.Instance.currentFood].unknown;
         foodImage.enabled = true;
     }

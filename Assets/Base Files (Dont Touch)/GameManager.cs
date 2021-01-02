@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => _instance ? _instance : FindObjectOfType<GameManager>();
     public enum GameState
     {
-        TitleScreen, MainGame, EndScreen
+        TitleScreen, MainGame, EndScreen, Intro
     }
     
     public GameState gameState
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     
     private GameState _gameState;
 
-    [SerializeField] private int roundsToWin;
+    //[SerializeField] private int roundsToWin;
     //public event Action OnMainGameStart;
     //foo 2
 
