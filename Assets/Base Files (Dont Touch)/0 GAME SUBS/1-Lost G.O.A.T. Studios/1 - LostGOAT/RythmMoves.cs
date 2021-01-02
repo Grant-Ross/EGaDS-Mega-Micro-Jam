@@ -61,7 +61,7 @@ namespace LostGOAT
                 this.GetComponent<Animator>().SetBool("Dance", false);
                 //this.transform.position += new Vector3(0, 1.1f, 0);
                 //this.transform.SetParent(Fork.transform, false);
-                this.transform.position = new Vector3(forkPos.x, forkPos.y - 250, forkPos.z);
+                this.transform.position = new Vector3(forkPos.x, forkPos.y - 250*.75f, forkPos.z);
                 //this.transform.rotation = Quaternion.Euler(0, 0, -90);
                 StartCoroutine(Kill());
             }

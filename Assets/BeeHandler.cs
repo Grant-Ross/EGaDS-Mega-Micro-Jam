@@ -10,11 +10,16 @@ public class BeeHandler : MonoBehaviour
     private void Awake()
     {
         MainGameManager.OnMainStart += BeeAnimation;
+        MainGameManager.Instance.GameOver += BeeDie;
     }
 
     private void BeeAnimation(bool win)
     {
         animator.Play(win ? "bee-win" : "bee-lose");
+    }
+    private void BeeDie()
+    {
+        animator.Play("bee-die");   
     }
 
     private void OnDestroy()

@@ -10,8 +10,7 @@ namespace Terry
         // Start is called before the first frame update
         public void StartButton()
         {
-            print("start");
-            GameManager.Instance.LoadScene("Main");
+            GameManager.Instance.LoadScene("Intro");
         }
 
         // Update is called once per frame

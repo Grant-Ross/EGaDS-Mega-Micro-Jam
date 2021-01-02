@@ -114,7 +114,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &876777739230068297
 GameObject:
@@ -210,6 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IveBeenGrabbed: 0
   indention: {fileID: 7230201155458096815}
+  IStabbedAMeatyBall: 0
 --- !u!222 &876777739230068303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -354,5 +355,5 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_TargetDisplay: 0

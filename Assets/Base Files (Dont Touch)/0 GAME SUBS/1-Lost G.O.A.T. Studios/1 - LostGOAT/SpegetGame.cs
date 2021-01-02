@@ -52,6 +52,7 @@ namespace LostGOAT
         // Update is called once per frame
         void Update()
         {
+            //if(Input.anyKeyDown) print (Input.inputString );
             if (isHere == false && Input.anyKeyDown == true)
             {
                 lose = true;
@@ -68,6 +69,7 @@ namespace LostGOAT
                 if (buttonPressed != currentNote && once == false && Input.inputString != "")   /// if they pressed th wrong button
                 {
                     once = true;
+                    good = false;
                     lose = true;
                     GameObject word = Badwords[Random.Range(0, Badwords.Length)];
                     word.GetComponent<Animator>().SetTrigger("Go");
@@ -101,6 +103,7 @@ namespace LostGOAT
         {
             if (collision.tag == "Ground")
             {
+                print("exit");
                 once = false;
                 isHere = false;
                 currentNote = "";
@@ -112,7 +115,7 @@ namespace LostGOAT
                     word.GetComponent<Animator>().SetTrigger("Go");
                     //Debug.Log("Missed");
                 }
-                good = false;
+                //good = false;
                 currentMeat = noMeat;
             }
         }
