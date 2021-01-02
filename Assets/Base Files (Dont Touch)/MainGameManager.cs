@@ -65,6 +65,7 @@ public class MainGameManager : MonoBehaviour
         _remainingGames = new List<int>();
         firstBossTry = true;
         gameOver = false;
+        gameWin = false;
         if (debugBossMode) StartCoroutine(LoadBossGame());
         else
         {
@@ -211,6 +212,8 @@ public class MainGameManager : MonoBehaviour
     {
         StartCoroutine(WaitForBossGameEnd(bossGame));
     }
+
+    public bool gameWin;
     private IEnumerator WaitForBossGameEnd(BossGame bossGame)
     {
         bossGame.gameOver = false;
@@ -226,6 +229,7 @@ public class MainGameManager : MonoBehaviour
         firstBossTry = false;
         scene.allowSceneActivation = true;
         yield return null;
+        gameWin = bossGame.gameWin;
         MainStart(bossGame.gameWin);
         if (remainingLives == 0)
         {

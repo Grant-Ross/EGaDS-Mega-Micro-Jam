@@ -382,11 +382,12 @@ MonoBehaviour:
   remainingLives: 3
   startWaitTime: 3
   indexOffset: 6
-  roundsToWin: 1
+  roundsToWin: 15
   debugBossMode: 0
-  testMode: 1
+  testMode: 0
   gameOver: 0
   bossSceneIndex: 4
+  gameWin: 0
 --- !u!1 &3256082928554374614
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2753176425101510309
 RectTransform:
   m_ObjectHideFlags: 0
