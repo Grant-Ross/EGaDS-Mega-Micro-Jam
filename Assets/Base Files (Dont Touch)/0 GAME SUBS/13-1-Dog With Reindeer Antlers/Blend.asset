@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Blend
   m_EditorClassIdentifier: 
   gameTime: 1
-  music: {fileID: 8300000, guid: 5b7e301072adcf047ab892e60fce946e, type: 3}
+  music: {fileID: 8300000, guid: 76e0953233d98f745a1e142e55b1ed55, type: 3}
+  volume: 1
   sounds:
   - soundName: win
     clip: {fileID: 8300000, guid: bcde3f8b8dec75b4ebe629e74f3aa9e0, type: 3}
@@ -27,4 +28,4 @@ MonoBehaviour:
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
-  gameWin: 1
+  gameWin: 0
