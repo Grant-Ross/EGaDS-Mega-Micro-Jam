@@ -93,4 +93,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Base Files (Dont Touch)/0 GAME SUBS/7-Apples or Bees/To the flower.unity
     guid: 4274032a5de9f2a4ca1715f1f35d1785
+  - enabled: 1
+    path: Assets/Base Files (Dont Touch)/0 GAME SUBS/13-2-Dog with Reindeer Antlers/Run.unity
+    guid: 7542d9b9f9d846143bf18ad420604563
   m_configObjects: {}
