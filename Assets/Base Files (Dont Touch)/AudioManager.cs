@@ -52,6 +52,7 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator IntroMusicSequence()
     {
+        _source.loop = false;
         PlayMusic(startMusic);
         yield return new WaitForSeconds(MainGameManager.ShortTime * 2 + MainGameManager.halfBeat);
         StartCoroutine(FadeMusic());
