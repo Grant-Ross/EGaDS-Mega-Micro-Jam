@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a078c2312ec8941acd235cf171e77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugGameOnly: 1
+  debugGameOnly: 0
   bossGame: {fileID: 11400000, guid: 288767b74e012274398aa0f38bdf5486, type: 2}
 --- !u!4 &422971736
 Transform:

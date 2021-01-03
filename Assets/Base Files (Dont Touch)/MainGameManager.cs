@@ -48,7 +48,7 @@ public class MainGameManager : MonoBehaviour
     [SerializeField] private int roundsToWin;
     [SerializeField] private bool debugBossMode;
     [SerializeField] private bool testMode;
-    private bool firstBossTry;
+    public bool firstBossTry;
     [HideInInspector] public bool gameOver;
 
     private void Awake()

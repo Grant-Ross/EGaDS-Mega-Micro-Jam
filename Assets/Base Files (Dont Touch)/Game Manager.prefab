@@ -385,6 +385,7 @@ MonoBehaviour:
   roundsToWin: 15
   debugBossMode: 0
   testMode: 0
+  firstBossTry: 0
   gameOver: 0
   bossSceneIndex: 4
   gameWin: 0

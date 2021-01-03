@@ -28,7 +28,12 @@ namespace BeeNice
 
         public virtual void LoseGame()
         {
+            StartCoroutine(LoseGameHelper());
+        }
+        private IEnumerator LoseGameHelper()
+        {
             BossGameManager.Instance.bossGame.gameWin = false;
+            yield return new WaitForSeconds(.01f);
             BossGameManager.Instance.bossGame.gameOver = true;
             BossGameManager.Instance.PlaySound("fail");
         }

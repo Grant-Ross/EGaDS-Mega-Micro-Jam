@@ -14,11 +14,19 @@ namespace BeeNice
         {
             base.Start();
             instance = this;
-            StartCoroutine(EndStage(stageLength));
-            var cutseceneMusic = GameObject.Find(music).GetComponent<AudioSource>();
-            if(cutseceneMusic != null)
+            if (MainGameManager.Instance.firstBossTry)
             {
-                cutseceneMusic.Play();
+
+                StartCoroutine(EndStage(stageLength));
+                var cutseceneMusic = GameObject.Find(music).GetComponent<AudioSource>();
+                if (cutseceneMusic != null)
+                {
+                    cutseceneMusic.Play();
+                }
+            }
+            else
+            {
+                gameWon.Invoke();
             }
         }
         private IEnumerator EndStage(float delay)
