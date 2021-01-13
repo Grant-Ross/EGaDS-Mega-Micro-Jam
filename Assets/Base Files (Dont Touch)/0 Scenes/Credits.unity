@@ -173,14 +173,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 78224cee159f47d4ab94ffaec0bb5c65, type: 2}
   panelToParent: {fileID: 741683440}
   moveRb: {fileID: 741683443}
-  moveSpeed: 60
+  moveSpeed: 70
   speedMultiplier: 20
   creditPanelTemplates:
   - {fileID: 2077299767609302312, guid: 17483d57fce2a9c41a5204d6f77a9342, type: 3}
   - {fileID: 8094344697484174391, guid: 96a52206f5f478f4b94101328780ecab, type: 3}
   - {fileID: 7695929984685144478, guid: 81a79c794c344b245870fa001ac9cb45, type: 3}
   - {fileID: 8825087311755735153, guid: 228371f244ccfa8448abc5d95f06a877, type: 3}
-  endTime: 125
 --- !u!4 &87245536
 Transform:
   m_ObjectHideFlags: 0

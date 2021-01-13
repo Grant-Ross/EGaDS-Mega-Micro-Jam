@@ -12,7 +12,8 @@ public class CreditsController : MonoBehaviour
     public float moveSpeed;
     public float speedMultiplier;
     public GameObject[] creditPanelTemplates;
-    public float endTime;
+    private RectTransform lastObj;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,6 @@ public class CreditsController : MonoBehaviour
     }
     private void Update()
     {
-        endTime -= Time.deltaTime * moveRb.velocity.y / moveSpeed;
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.S))
         {
             SetScrollVelocity(moveSpeed * speedMultiplier);
@@ -35,7 +35,8 @@ public class CreditsController : MonoBehaviour
         {
             SceneManager.LoadScene("TitleScreen");
         }
-        if(endTime <= 0)
+        print(((RectTransform)lastObj.transform).position.y);
+        if (((RectTransform)lastObj.transform).position.y > Screen.height)
         {
             SceneManager.LoadScene("TitleScreen");
         }
@@ -65,7 +66,7 @@ public class CreditsController : MonoBehaviour
 
             }
         }
-        Instantiate(creditPanelTemplates[3], panelToParent);
+        lastObj = (RectTransform)Instantiate(creditPanelTemplates[3], panelToParent).transform;
     }
     private void GenerateSoloPanels(CreditPanel panel)
     {
