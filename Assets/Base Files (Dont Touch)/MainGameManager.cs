@@ -46,6 +46,9 @@ public class MainGameManager : MonoBehaviour
     public float startWaitTime;
     public int indexOffset;
     [SerializeField] private int roundsToWin;
+
+    public void SetRounds(int r) { roundsToWin = r; }
+
     [SerializeField] private bool debugBossMode;
     [SerializeField] private bool testMode;
     public bool firstBossTry;

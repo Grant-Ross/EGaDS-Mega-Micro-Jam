@@ -43,11 +43,6 @@ public class GameManager : MonoBehaviour
     
     private GameState _gameState;
 
-    //[SerializeField] private int roundsToWin;
-    //public event Action OnMainGameStart;
-    //foo 2
-
-
     private void Awake()
     {
         if (_instance == null) _instance = this;
