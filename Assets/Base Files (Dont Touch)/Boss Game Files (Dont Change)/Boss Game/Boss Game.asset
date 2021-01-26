@@ -12,42 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8c7539471eabd498d8a806c263dcff, type: 3}
   m_Name: Boss Game
   m_EditorClassIdentifier: 
-  gameWin: 1
-  gameOver: 1
+  gameWin: 0
+  gameOver: 0
   sounds:
   - soundName: badfood
     clip: {fileID: 8300000, guid: 4907d23cb219e4cdca048cf195dc25ce, type: 3}
-    volume: 0.5
+    volume: 0.7
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
   - soundName: fall
     clip: {fileID: 8300000, guid: f7c95d49417b64d77afc6c1f22fa340f, type: 3}
-    volume: 0.2
+    volume: 0.5
     minPitch: 0.69
     maxPitch: 1.57
     source: {fileID: 0}
   - soundName: goodfood
     clip: {fileID: 8300000, guid: 155177a1d445e4ebe8214be6466e8885, type: 3}
-    volume: 0.5
+    volume: 0.7
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
   - soundName: mix1
     clip: {fileID: 8300000, guid: 2ce3b1a78ff8249f38bea5fba5233ac7, type: 3}
-    volume: 0.5
+    volume: 0.7
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
   - soundName: mix2
     clip: {fileID: 8300000, guid: 371d243535e8d478fb788a4ac4a72a33, type: 3}
-    volume: 0.5
+    volume: 0.7
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
   - soundName: ready
     clip: {fileID: 8300000, guid: d1374f7aaad6b462dad7a96e6b4a0e8a, type: 3}
-    volume: 0.5
+    volume: 0.7
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
@@ -65,13 +65,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - soundName: tier2
     clip: {fileID: 8300000, guid: 4f7f76f4db303414d89b83d87298a702, type: 3}
-    volume: 0.5
+    volume: 0.7
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
   - soundName: tier3
     clip: {fileID: 8300000, guid: c754efa7b3a15478a818dea4ada0bece, type: 3}
-    volume: 0.5
+    volume: 0.7
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - soundName: missilelaunch
     clip: {fileID: 8300000, guid: 132b7b268c78e431d83b943cd92924ba, type: 3}
-    volume: 0.18
+    volume: 0.517
     minPitch: 0.76
     maxPitch: 1
     source: {fileID: 0}
@@ -101,25 +101,25 @@ MonoBehaviour:
     source: {fileID: 0}
   - soundName: rocketloop
     clip: {fileID: 8300000, guid: 85ec850bd82ce4c6db62e1189889eb12, type: 3}
-    volume: 0.36
+    volume: 0.5
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
   - soundName: fail
     clip: {fileID: 8300000, guid: ae94680f5e50c49fcb9faaae60716960, type: 3}
-    volume: 0.15
+    volume: 0.45
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
   - soundName: success
     clip: {fileID: 8300000, guid: 69c849bfd03824876bdb21fc45ee5a16, type: 3}
-    volume: 0.4
+    volume: 0.6
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}
   - soundName: victory
     clip: {fileID: 8300000, guid: ca0e13caeae55a146ba53dada47f7fc4, type: 3}
-    volume: 0.3
+    volume: 0.55
     minPitch: 1
     maxPitch: 1
     source: {fileID: 0}

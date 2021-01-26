@@ -29,6 +29,12 @@ namespace karina
 
         private bool gameOver;
         private bool hasItem;
+        private bool inputReady;
+
+        private float horizontal;
+        private float vertical;
+
+
 
         void Start()
         {
@@ -41,8 +47,18 @@ namespace karina
             MinigameManager.Instance.PlaySound("ding");
         }
 
-        private bool inputReady;
+        void Update()
+        {
+            /*movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+            rb.MovePosition(rb.position + movement * speed * Time.deltaTime);*/
 
+            horizontal = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            vertical = Input.GetAxisRaw("Vertical");
+            rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
+            if (Input.GetKeyDown("space")) inputReady = true;
+        }
 
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -61,17 +77,7 @@ namespace karina
                 render.sprite = handSprites[(int)myStage];
             }
         }
-        private void Update()
-        {
-            if(Input.GetKeyDown("space")) inputReady = true;
-        }
-        void FixedUpdate()
-        {
-            movement.x = Input.GetAxisRaw("Horizontal");
-            movement.y = Input.GetAxisRaw("Vertical");
-            rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
-        }
-        
+
         //pick up item in hand and give to customer
         void OnTriggerStay2D(Collider2D other)
         {
@@ -126,7 +132,7 @@ namespace karina
 
 
                 //give to customer
-                if (other.gameObject.tag == "Object 4" && myStage == inHand.drink)
+                if ((other.gameObject.tag == "Object 4") && myStage == inHand.drink)
                 {
                     if ((OrderManager.customerOrder == "drink") && (myStage == inHand.drink))
                     {
@@ -156,9 +162,9 @@ namespace karina
                     MinigameManager.Instance.PlaySound("pop");
                 }
 
-                else if (other.gameObject.tag == "Object 4" && myStage == inHand.fries)
+                else if ((other.gameObject.tag == "Object 4") && myStage == inHand.fries)
                 {
-                    if (OrderManager.customerOrder == "fries" && myStage == inHand.fries)
+                    if ((OrderManager.customerOrder == "fries") && (myStage == inHand.fries))
                     {
                         //Debug.Log("win");
                         MinigameManager.Instance.minigame.gameWin = true;
@@ -184,7 +190,7 @@ namespace karina
                     MinigameManager.Instance.PlaySound("pop");
                 }
 
-                else if (other.gameObject.tag == "Object 4" && myStage == inHand.borgar)
+                else if ((other.gameObject.tag == "Object 4") && myStage == inHand.borgar)
                 {
                     if ((OrderManager.customerOrder == "borgar") && (myStage == inHand.borgar))
                     {

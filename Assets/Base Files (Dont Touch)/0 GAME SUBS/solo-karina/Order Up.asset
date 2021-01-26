@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTime: 0
   music: {fileID: 8300000, guid: c47ee75f3e65779408b770e829243d88, type: 3}
-  volume: 0.871
   sounds:
   - soundName: ding
     clip: {fileID: 8300000, guid: b514da53ecdf2114a8b33881c60eb9f9, type: 3}

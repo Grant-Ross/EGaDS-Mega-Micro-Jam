@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.15
+  parallaxEffect: 0.12
 --- !u!50 &33232566
 Rigidbody2D:
   serializedVersion: 4
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b60a121ced77f428b1898416aac58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugGameOnly: 0
+  debugGameOnly: 1
   minigame: {fileID: 11400000, guid: c12e2fe700adad44f9ae57e717477188, type: 2}
 --- !u!4 &215339488
 Transform:
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a310927217b534f429fcc634429032dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 15
   rb: {fileID: 523465764}
   drink: {fileID: 33232561}
   fries: {fileID: 1675835371}
@@ -882,7 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.25
+  parallaxEffect: 0.22
 --- !u!1 &828661565
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,7 +978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.2
+  parallaxEffect: 0.17
 --- !u!1 &867644792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.15
+  parallaxEffect: 0.12
 --- !u!50 &867644797
 Rigidbody2D:
   serializedVersion: 4
@@ -1141,7 +1141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &918096778
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1973,7 +1973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.25
+  parallaxEffect: 0.22
 --- !u!1 &1455474469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,7 +2171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.15
+  parallaxEffect: 0.12
 --- !u!50 &1675835376
 Rigidbody2D:
   serializedVersion: 4
@@ -2464,7 +2464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.25
+  parallaxEffect: 0.22
 --- !u!50 &1977876390
 Rigidbody2D:
   serializedVersion: 4
@@ -2581,7 +2581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.35
+  parallaxEffect: 0.25
 --- !u!1 &2115963210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,7 +2678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand: {fileID: 523465761}
-  parallaxEffect: 0.15
+  parallaxEffect: 0.12
 --- !u!60 &2115963214
 PolygonCollider2D:
   m_ObjectHideFlags: 0
